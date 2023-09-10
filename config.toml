@@ -1,11 +1,10 @@
-title = "My New Hugo Site"
+title = "Joaquin Metayer"
 
 [menu]
   [[menu.main]]
     identifier = "posts"
     name = "Posts"
     url = "/posts"
-    weight = 10
 
   [[menu.main]]
     identifier = "about"
