@@ -17,10 +17,10 @@ window.onload = function () {
   var messages = [
     "Hey there 👋",
     "I'm Joaquin",
-    "A nerd software engineer creating<br>solutions on the internet",
+    "A nerd <strong>software engineer</strong> creating<br>solutions on the internet",
     "Loving the frontend development",
     "But... I dont hate the backend 😅",
-    'Find my portfolio projects <a target="_blank" href="https://indexoneplace.netlify.app">here</a>.',
+    'Find my portfolio projects <strong><a target="_blank" href="https://indexoneplace.netlify.app">here</a></strong>.',
     "Now working on <a target='_blank' href='https://www.instagram.com/bitlogic.io/'>@bitlogic</a>.",
     'Contact me on <a target="_blank" href="https://www.linkedin.com/in/joaquinmetayer/">LinkedIn</a> or <a target="_blank" href="mailto:joaquinmetayer@gmail.com">email</a>.',
     "See you solving bugs!",
