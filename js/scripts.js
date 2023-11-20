@@ -19,8 +19,6 @@ window.onload = function () {
     "I'm Joaquin",
     "A nerd <strong>software engineer</strong> creating<br>solutions on the internet",
     "Loving the frontend development",
-    "But... I dont hate the backend 😅",
-    'Find my portfolio projects <strong><a target="_blank" href="https://indexoneplace.netlify.app">here</a></strong>.',
     "Now working on <a target='_blank' href='https://www.instagram.com/bitlogic.io/'>@bitlogic</a>.",
     'Contact me on <a target="_blank" href="https://www.linkedin.com/in/joaquinmetayer/">LinkedIn</a> or <a target="_blank" href="mailto:joaquinmetayer@gmail.com">email</a>.',
     "See you solving bugs!",
