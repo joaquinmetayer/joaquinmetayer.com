@@ -1,27 +1,17 @@
 window.onload = function () {
   var messagesEl = document.querySelector(".messages");
-  var typingSpeed = 20;
+  var typingSpeed = 30;
   var loadingText = "<b>•</b><b>•</b><b>•</b>";
   var messageIndex = 0;
-
-  var getCurrentTime = function () {
-    var date = new Date();
-    var hours = date.getHours();
-    var minutes = date.getMinutes();
-    var current = hours + minutes * 0.01;
-    if (current >= 5 && current < 19) return "Have a nice day";
-    if (current >= 19 && current < 22) return "Have a nice evening";
-    if (current >= 22 || current < 5) return "Have a good night";
-  };
 
   var messages = [
     "Hey there 👋",
     "I'm Joaquin",
     "A nerd <strong>software engineer</strong> creating<br>solutions on the internet",
     "Loving the frontend development",
-    'Contact me on <a target="_blank" href="https://www.linkedin.com/in/joaquinmetayer/">LinkedIn</a> or <a target="_blank" href="mailto:joaquinmetayer@gmail.com">email</a>.',
+    'Every day improving my life, dev<br>carreer and my side project... <br>documenting all on <a target="_blank" href="https://www.youtube.com/@joaquinmetayer">YT</a> and <a target="_blank" href="https://www.instagram.com/joaquinmetayer">IG</a>',
+    'Contact me on <a target="_blank" href="https://www.linkedin.com/in/joaquinmetayer">LinkedIn</a> or <a target="_blank" href="mailto:joaquinmetayer@gmail.com">email</a>',
     "See you solving bugs!",
-    getCurrentTime(),
   ];
 
   var getFontSize = function () {
