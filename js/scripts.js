@@ -7,10 +7,9 @@ window.onload = function () {
   var messages = [
     "Hey there 👋",
     "I'm Joaquin",
-    "A nerd <strong>software engineer</strong> creating<br>solutions on the internet",
-    "Loving the frontend development",
-    'Every day improving my life, dev<br>carreer and my side project... <br>documenting all on <a target="_blank" href="https://www.youtube.com/@joaquinmetayer">YT</a> and <a target="_blank" href="https://www.instagram.com/joaquinmetayer">IG</a>',
-    'Contact me on <a target="_blank" href="https://www.linkedin.com/in/joaquinmetayer">LinkedIn</a> or <a target="_blank" href="mailto:joaquinmetayer@gmail.com">email</a>',
+    "A nerd <strong>software engineer</strong> creating<br>and building on the internet.",
+    'Every day improving and documenting<br>all process on <a target="_blank" href="https://www.youtube.com/@joaquinmetayer">YouTube</a> and <a target="_blank" href="https://www.instagram.com/joaquinmetayer">Instagram</a>',
+    'Reach me on <a target="_blank" href="https://www.linkedin.com/in/joaquinmetayer">LinkedIn</a> or <a target="_blank" href="mailto:joaquinmetayer@gmail.com">email</a>',
     "See you solving bugs!",
   ];
 
