@@ -839,7 +839,7 @@ class HomeChat extends Component {
     }
     link.href = "HomeChat.png";
     windowOnload();
-    document.title = "Joaquin Metayer | Home";
+    document.title = "Joaquin Metayer";
   }
   render() {
     return <div className="messages"></div>;
