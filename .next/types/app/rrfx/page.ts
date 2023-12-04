@@ -1,8 +1,8 @@
-// File: /Users/joaquinmetayer/Downloads/code/joaquinmetayer.com/src/app/rrfx/page.jsx
-import * as entry from '../../../../src/app/rrfx/page.js'
+// File: /Users/joaquinmetayer/Downloads/code/joaquinmetayer.com/app/rrfx/page.jsx
+import * as entry from '../../../../app/rrfx/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
-type TEntry = typeof import('../../../../src/app/rrfx/page.js')
+type TEntry = typeof import('../../../../app/rrfx/page.js')
 
 // Check that the entry is a valid entry
 checkFields<Diff<{
