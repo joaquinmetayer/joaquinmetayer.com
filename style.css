@@ -2,6 +2,8 @@
     font-family: sans-serif;
     margin: 0;
     padding: 0;
+    color: #ffffff;
+    background-color: #010523;
 }
 .main-container{
     padding: 20px;
@@ -15,10 +17,10 @@
 a{
     text-decoration: none;
     padding: 10px;
-    background-color: #00000010;
+    background-color: #ffffff10;
     min-width: 200px;
     text-align: center;
-    color: #000;
+    color: #ffffff;
     border-radius: 6px;
     cursor: pointer;
     font-size: 18px;
@@ -26,6 +28,5 @@ a{
 }
 a:hover{
     transition: ease-in-out 0.2s;
-    background-color: #00000020;
-
+    background-color: #ffffff20;
 }
