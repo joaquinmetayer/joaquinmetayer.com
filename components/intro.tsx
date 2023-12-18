@@ -24,7 +24,7 @@ export default function Intro() {
         <div className="relative">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1.05 }}
             transition={{
               type: "tween",
               duration: 0.2,
@@ -44,7 +44,7 @@ export default function Intro() {
           <motion.span
             className="absolute bottom-0 right-0 text-4xl"
             initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{
               type: "spring",
               stiffness: 125,
