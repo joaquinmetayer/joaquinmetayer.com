@@ -4,7 +4,6 @@ import { FaReact } from "react-icons/fa";
 import { IoIosRocket } from "react-icons/io";
 import { IoLogoAngular } from "react-icons/io";
 import { FaPython } from "react-icons/fa";
-import corpcommentImg from "@/public/corpcomment.png";
 import indexProject from "@/public/indexProject.png";
 import greenProject from "@/public/greenProject.png";
 import kooksProject from "@/public/kooksProject.png";
