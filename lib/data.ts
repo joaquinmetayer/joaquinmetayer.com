@@ -86,6 +86,7 @@ export const projectsData = [
       "All my projects in one place, this includes large projects and other small ones that were created to practice new technologies like Next.js, React Redux, Angular and more!",
     tags: ["Next.js", "React", "Redux", "And more"],
     imageUrl: indexProject,
+    urlProject: "https://indexoneplace.netlify.app/"
   },
   {
     title: "Two Click",
@@ -93,6 +94,7 @@ export const projectsData = [
       "E-commerce with pure javascript of Apple products including home page with category filter, price calculation based on external API consumption and email sending at checkout.",
     tags: ["HTML", "CSS", "Bootstrap", "JavaScript"],
     imageUrl: twoProject,
+    urlProject: "https://github.com/joaquinmetayer/twoclickstore"
   },
   {
     title: "Kooks Store",
@@ -100,6 +102,7 @@ export const projectsData = [
       "E-commerce based on an NTF artist where it has a home page, product details and checkout, storing all this data in the Firebase database.",
     tags: ["React", "API Context", "Firebase", "HTML", "CSS"],
     imageUrl: kooksProject,
+    urlProject: "https://github.com/joaquinmetayer/kooks-metayer"
   },
   {
     title: "GREEN Golf",
@@ -107,6 +110,7 @@ export const projectsData = [
       "Responsive landing page about a gold school with pricing and contact section. Applying all the knowledge about html and css to create sites that adapt to any device.",
     tags: ["HTML", "CSS", "SASS"],
     imageUrl: greenProject,
+    urlProject: "https://github.com/joaquinmetayer/greengolf"
   },
 ] as const;
 
