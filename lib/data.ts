@@ -43,7 +43,7 @@ export const experiencesData = [
     description:
       "Design and development of trading systems algorithms and indicators using MQL4 for MetaTrader 4, Pine Script for TradingView, C# for Ninja Trader 7 and 8 and strategy building in Ninja Trader 7 and 8 platform.",
     icon: React.createElement(FaRobot),
-    date: "Jun 2018 - Jul 2022",
+    date: "Jan 2018 - Jul 2022",
   },
   {
     title: "The developer carreer starts",
@@ -105,7 +105,7 @@ export const projectsData = [
     title: "GREEN Golf",
     description:
       "Responsive landing page about a gold school with pricing and contact section. Applying all the knowledge about html and css to create sites that adapt to any device.",
-    tags: ["HTML", "CSS"],
+    tags: ["HTML", "CSS", "SASS"],
     imageUrl: greenProject,
   },
 ] as const;
