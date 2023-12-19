@@ -54,7 +54,7 @@ export const experiencesData = [
     date: "Jul 2022",
   },
   {
-    title: "SasS Solution",
+    title: "SaaS Solution",
     location: "",
     description:
       'Pioneered the creation, design, and development of a distinctive B2C and B2B solution in LATAM. Automated processes through a WhatsApp-based "chatbot" with commands to a Python backend. Leveraged Selenium for web scraping and interfaced with +6 platforms, enhancing efficiency. Ask for more info.',
