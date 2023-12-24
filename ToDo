@@ -1,0 +1,18 @@
+- logica de cuadno se cambie de pagina me cambie la metadata
+   - en el home que por ahora solo sea soft engineer
+   - en 997 esto mismo
+- data de links que muestro en home / todos en un archivo de data
+- hacer la misma estructura de data que hice con el home pero esta vez para 997
+- archivo donde tendre todas las consultas a apis externas en un archivo api
+- 997
+    - componente nav que mapee los datos de archivo data, mostrando links de info y un boton de login con logo etc
+    - componente hero / info
+    - componente precios
+    - componente about
+    - componente footer
+    - componente / seccion que cuando le den a comprar o login haga que si no estan registrados, lo hagan y si seleccionaron para comprar lo mande a un checkout o a panel de ya logeado viendo si tiene productos comprados
+    - layout de cliente / user logeado
+    - seccion / componente para que compre subscripcion telegram signals
+    - seccion / componente para que compre subscripcion discord close friends
+    - seccion / componente para que compre y vea el curso que cree en videos
+    -
