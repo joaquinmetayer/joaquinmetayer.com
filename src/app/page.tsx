@@ -26,7 +26,6 @@ export default function Home() {
           Email
         </a>
       </div>
-
       <div className="fixed bottom-0 left-0 p-4 flex justify-between w-full">
         <h1>Joaquin Metayer</h1>
         <div className="flex">
