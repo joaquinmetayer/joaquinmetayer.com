@@ -26,7 +26,7 @@ export default function Home() {
           <a href="https://indexoneplace.netlify.app/" target="_blank">
             Portfolio projects
           </a>
-          <a href="./CV_Joaquin_Metayer_Fullstack_Developer.pdf" target="_blank">
+          <a href="./JoaquinMetayerEnglish.pdf" target="_blank">
             CV
           </a>
           <a href="https://instagram.com/joaquinmetayer" target="_blank">
