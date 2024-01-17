@@ -23,9 +23,6 @@ export default function Home() {
       </ShaderGradientCanvas>
       <div className="fixed top-0 left-0 p-4 flex items-end w-full flex-col gap-2">
         <div className="flex gap-2">
-          <a href="https://instagram.com/joaquinmetayer" target="_blank">
-            Instagram
-          </a>
           <a href="https://youtube.com/@joaquinmetayer" target="_blank">
             Youtube
           </a>
