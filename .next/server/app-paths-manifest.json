@@ -1,5 +1,5 @@
 {
   "/page": "app/page.js",
-  "/icon.png/route": "app/icon.png/route.js",
-  "/youtube/page": "app/youtube/page.js"
+  "/fxblue/page": "app/fxblue/page.js",
+  "/icon.png/route": "app/icon.png/route.js"
 }

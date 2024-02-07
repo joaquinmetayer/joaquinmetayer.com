@@ -11,10 +11,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
-    "/youtube/page": [
+    "/fxblue/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/youtube/page.js"
+      "static/chunks/app/fxblue/page.js"
     ]
   }
 }

@@ -1,8 +1,8 @@
-// File: /Users/joaquinmetayer/Downloads/code/joaquinmetayer.com/src/app/youtube/page.tsx
-import * as entry from '../../../../src/app/youtube/page.js'
+// File: /Users/joaquinmetayer/Downloads/code/joaquinmetayer.com/src/app/fxblue/page.tsx
+import * as entry from '../../../../src/app/fxblue/page.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
-type TEntry = typeof import('../../../../src/app/youtube/page.js')
+type TEntry = typeof import('../../../../src/app/fxblue/page.js')
 
 // Check that the entry is a valid entry
 checkFields<Diff<{
