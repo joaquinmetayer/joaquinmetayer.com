@@ -8,7 +8,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Joaquin Metayer | Software Engineer",
+  title: "Joaquin Metayer",
   icons: {
     icon: "/icon.png",
   },
