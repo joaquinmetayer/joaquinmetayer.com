@@ -29,11 +29,11 @@ export default function Home() {
           <a href="https://github.com/joaquinmetayer" target="_blank">
             Github
           </a>
+          <a href="https://twitter.com/joaquinmeta" target="_blank">
+            Twitter
+          </a>
           <a href="https://instagram.com/joaquinmetayer" target="_blank">
             Instagram
-          </a>
-          <a href="https://youtube.com/@joaquinmetayer" target="_blank">
-            Youtube
           </a>
         </div>
         <a
