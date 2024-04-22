@@ -18,7 +18,7 @@ export default function Home() {
       >
         <ShaderGradient
           control="query"
-          urlString="https://www.shadergradient.co/customize?animate=on&axesHelper=on&bgColor1=%23000000&bgColor2=%23000000&brightness=0&cAzimuthAngle=180&cDistance=3.9&cPolarAngle=115&cameraZoom=1&color1=%23001041&color2=%23000000&color3=%23000000&destination=onCanvas&embedMode=off&envPreset=city&format=gif&fov=45&frameRate=10&grain=off&lightType=3d&pixelDensity=1&positionX=-0.5&positionY=0.1&positionZ=0&range=enabled&rangeEnd=40&rangeStart=0&reflection=1&rotationX=0&rotationY=0&rotationZ=235&shader=defaults&type=waterPlane&uAmplitude=0&uDensity=1.1&uFrequency=5.5&uSpeed=0.1&uStrength=2.4&uTime=0.2&wireframe=false&zoomOut=false"
+          urlString="https://www.shadergradient.co/customize?animate=on&axesHelper=on&bgColor1=%23000000&bgColor2=%23000000&brightness=0&cAzimuthAngle=180&cDistance=3.9&cPolarAngle=115&cameraZoom=1&color1=%23000fff&color2=%23000000&color3=%23000000&destination=onCanvas&embedMode=off&envPreset=city&format=gif&fov=45&frameRate=10&grain=on&lightType=3d&pixelDensity=0.8&positionX=-0.5&positionY=0.1&positionZ=0&range=enabled&rangeEnd=40&rangeStart=0&reflection=1&rotationX=0&rotationY=0&rotationZ=235&shader=defaults&type=waterPlane&uAmplitude=0&uDensity=1.1&uFrequency=5.5&uSpeed=0.1&uStrength=2.1&uTime=0&wireframe=false&zoomOut=false"
         />
       </ShaderGradientCanvas>
       <div className="fixed top-0 left-0 p-4 flex items-end w-full flex-col gap-2">
@@ -46,6 +46,9 @@ export default function Home() {
         <div className="flex">
           <h2>Software Engineer</h2>
         </div>
+      </div>
+      <div className="fixed inset-0 flex justify-center items-center z-50 p-8">
+        <iframe className="w-full max-w-md h-52" src="https://embeds.beehiiv.com/66e32a19-920e-41fd-8191-7c4e95a24e67?slim=true" data-test-id="beehiiv-embed"></iframe>
       </div>
     </div>
   );
