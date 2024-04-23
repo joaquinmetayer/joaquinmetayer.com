@@ -14,7 +14,7 @@ export default function Blog({
   );
 
   return (
-    <div className="mx-auto max-w-2xl px-8 py-2 blog">
+    <div className="max-w-2xl px-5 py-2 blog">
       {header}
       {children}
     </div>
