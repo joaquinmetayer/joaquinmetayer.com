@@ -36,12 +36,7 @@ export default function Home() {
             Email
           </a>
         </div>
-        <a
-          className="bg-slate-100 bg-opacity-20 px-3 py-1 rounded-xl"
-          href="/blog"
-        >
-          Blog
-        </a>
+        <div></div>
       </div>
       <div className="fixed bottom-0 left-0 p-4 flex justify-between w-full">
         <h1>Joaquin Metayer</h1>
