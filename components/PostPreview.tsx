@@ -3,12 +3,12 @@ import { PostMetadata } from "./PostMetadata";
 
 const PostPreview = (props: PostMetadata) => {
   return (
-    <p>
-      <span className="gray">
+    <p className="post-list">
+      <span className="text-slate-400">
         {props.date}
       </span>
       {' - '}
-      <Link href={`/posts/${props.slug}`}>
+      <Link href={`/blog/posts/${props.slug}`}>
         {props.title}
       </Link>
     </p>
