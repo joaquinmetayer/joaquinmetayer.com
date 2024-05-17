@@ -29,9 +29,6 @@ export default function Home() {
           <a href="https://github.com/joaquinmetayer" target="_blank">
             Github
           </a>
-          <a href="https://instagram.com/joaquinmetayer" target="_blank">
-            Instagram
-          </a>
           <a href="mailto:joaquinmetayer@gmail.com" target="_blank">
             Email
           </a>
