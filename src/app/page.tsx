@@ -8,12 +8,10 @@ export default function Home() {
     <PostPreview key={post.slug} {...post} />
   ));
 
-  //<Hero / >
-  //{postPreviews}
-
   return (
     <>
-      <p>404 err</p>
+      <Hero / >
+      {postPreviews}
       
     </>
   );
