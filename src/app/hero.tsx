@@ -69,11 +69,11 @@ export default function Hero() {
       </h1>
       <p className='subtitle'>Diario formato texto.</p>
       <p>
-        <a href="" className='black'>LinkedIn</a>
+        <a href="https://www.linkedin.com/in/joaquinmetayer/" className='black'>LinkedIn</a>
         {' '}
-        <a href="" className='black'>GitHub</a>
+        <a href="https://github.com/joaquinmetayer" className='black'>GitHub</a>
         {' '}
-        <a href="" className='black'>Email</a>
+        <a href="mailto:joaquinmetayer@gmail.com" className='black'>Email</a>
       </p>
       <input
         type="email"
