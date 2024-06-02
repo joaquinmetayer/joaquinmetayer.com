@@ -55,6 +55,12 @@ export default function Hero() {
     }
   };
 
+  const handleKeyDown = (event: { key: string; }) => {
+    if (event.key === 'Enter') {
+      handleSubscribe();
+    }
+  };
+
   return (
     <div>
       <img src="/favicon.ico" alt="duck" className="duck" />
@@ -74,7 +80,8 @@ export default function Hero() {
         required
         placeholder='tuemail@email.com'
         value={email}
-        onChange={(e) => setEmail(e.target.value)}
+        onChange={(e: { target: { value: any; }; }) => setEmail(e.target.value)}
+        onKeyDown={handleKeyDown}
       />
       <button onClick={handleSubscribe} disabled={isSubmitting}>
         {isSubmitting ? 'Subscribiendo...' : 'Subscribirme'}
