@@ -26,7 +26,7 @@ export default function Hero() {
       records: [
         {
           fields: {
-            Name: email
+            Email: email
           }
         }
       ]
