@@ -6,6 +6,7 @@ export default function Hero() {
   const [message, setMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [emailError, setEmailError] = useState('');
+  const [showMessage, setShowMessage] = useState(true);
 
   const validateEmail = (email: string) => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -31,6 +32,7 @@ export default function Hero() {
         }
       ]
     };
+    setEmail('');
 
     try {
       const response = await fetch(endpoint, {
@@ -41,15 +43,19 @@ export default function Hero() {
         },
         body: JSON.stringify(body)
       });
-
+      
       if (!response.ok) {
         throw new Error(`Error: ${response.statusText}`);
       }
 
       const result = await response.json();
       setMessage('Subscripción exitosa!');
+      setShowMessage(true);
+      setTimeout(() => setShowMessage(false), 2500);
     } catch (error) {
       setMessage('Error en la subscripción.');
+      setShowMessage(true); 
+      setTimeout(() => setShowMessage(false), 2500);
     } finally {
       setIsSubmitting(false);
     }
@@ -86,8 +92,8 @@ export default function Hero() {
       <button onClick={handleSubscribe} disabled={isSubmitting}>
         {isSubmitting ? 'Subscribiendo...' : 'Subscribirme'}
       </button>
-      {emailError && <p>{emailError}</p>}
-      {message && <p>{message}</p>}
+      {(emailError && showMessage) && <p>{emailError}</p>}
+      {(message && showMessage) && <p>{message}</p>}
       <hr />
     </div>
   );
