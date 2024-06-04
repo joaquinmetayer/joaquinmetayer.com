@@ -69,9 +69,8 @@ export default function Hero() {
 
   return (
     <div>
-      <img src="/favicon.ico" alt="duck" className="duck" />
       <h1>
-        <a href="/" className='black'>joaquinmetayer</a>
+        <a href="/" >joaquinmetayer</a>
       </h1>
       <p>
         <a href="https://www.linkedin.com/in/joaquinmetayer/" target='_blank'>LinkedIn</a>
