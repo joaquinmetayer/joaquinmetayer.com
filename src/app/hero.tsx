@@ -75,6 +75,8 @@ export default function Hero() {
       <p>
         <a href="https://www.linkedin.com/in/joaquinmetayer/" target='_blank'>LinkedIn</a>
         {' '}
+        <a href="https://www.instagram.com/joaquinmetayer/" target='_blank'>Instagram</a>
+        {' '}
         <a href="https://github.com/joaquinmetayer" target='_blank'>GitHub</a>
         {' '}
         <a href="mailto:joaquinmetayer@gmail.com" target='_blank'>Email</a>
