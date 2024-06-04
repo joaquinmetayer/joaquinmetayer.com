@@ -73,8 +73,7 @@ export default function Hero() {
       <h1>
         <a href="/" className='black'>joaquinmetayer</a>
       </h1>
-      <p className='subtitle'>Diario formato texto.</p>
-      <p>
+      <p className='subtitle'>
         <a href="https://www.linkedin.com/in/joaquinmetayer/" className='black' target='_blank'>LinkedIn</a>
         {' '}
         <a href="https://github.com/joaquinmetayer" className='black' target='_blank'>GitHub</a>
