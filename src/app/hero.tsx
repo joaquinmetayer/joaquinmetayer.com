@@ -73,12 +73,12 @@ export default function Hero() {
       <h1>
         <a href="/" className='black'>joaquinmetayer</a>
       </h1>
-      <p className='subtitle'>
-        <a href="https://www.linkedin.com/in/joaquinmetayer/" className='black' target='_blank'>LinkedIn</a>
+      <p>
+        <a href="https://www.linkedin.com/in/joaquinmetayer/" className='subtitle' target='_blank'>LinkedIn</a>
         {' '}
-        <a href="https://github.com/joaquinmetayer" className='black' target='_blank'>GitHub</a>
+        <a href="https://github.com/joaquinmetayer" className='subtitle' target='_blank'>GitHub</a>
         {' '}
-        <a href="mailto:joaquinmetayer@gmail.com" className='black' target='_blank'>Email</a>
+        <a href="mailto:joaquinmetayer@gmail.com" className='subtitle' target='_blank'>Email</a>
       </p>
       <input
         type="email"
