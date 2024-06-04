@@ -1,32 +1,11 @@
 body {
   max-width: 600px;
   padding: 20px;
-  margin: 0 auto;
 }
 code {
   text-wrap: wrap;
   color: #808080;
 }
-.duck {
-  width: 75px;
-  margin: 0;
-}
 img {
   width: 100%;
-}
-h1 {
-  margin-top: 5px;
-  margin-bottom: 17.5px;
-}
-hr{
-    margin-top: 17.5px;
-}
-input{
-    margin-right: 7.5px;
-}
-input, button{
-    padding: 5px;
-}
-.black{
-    color: #000;
 }
