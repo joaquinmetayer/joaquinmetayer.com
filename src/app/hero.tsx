@@ -92,6 +92,8 @@ export default function Hero() {
       </button>
       {(emailError && showMessage) && <p>{emailError}</p>}
       {(message && showMessage) && <p>{message}</p>}
+      <p></p>
+      <p></p>
       <hr />
     </div>
   );
