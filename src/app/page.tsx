@@ -1,6 +1,6 @@
 import getPostMetadata from "../../components/getPostMetadata";
 import PostPreview from "../../components/PostPreview";
-import Hero from "./hero";
+import Hero from "./Hero";
 
 export default function Home() {
   const postMetadata = getPostMetadata();
@@ -10,9 +10,8 @@ export default function Home() {
 
   return (
     <>
-      <Hero / >
+      <Hero />
       {postPreviews}
-      
     </>
   );
 }
