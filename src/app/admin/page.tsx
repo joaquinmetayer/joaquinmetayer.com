@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, ChangeEvent, useEffect } from "react";
-import { useMediaQuery } from "@mui/material";
 import axios from "axios";
 
 interface ImageFile {
@@ -18,7 +17,7 @@ const AdminPanel: React.FC = () => {
   useEffect(() => {
     setIsLocal(
       typeof window !== "undefined" &&
-        window.location.href === "http://localhost:3000/admin"
+        window.location.href.startsWith('http://localhost')
     );
     const savedTitle = localStorage.getItem("jmjmtitle");
     const savedContent = localStorage.getItem("jmcontent");
