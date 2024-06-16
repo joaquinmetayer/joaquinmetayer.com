@@ -1,5 +1,5 @@
 export interface PostMetadata {
-  title: string;
   date: string;
+  title: string;
   slug: string;
 }

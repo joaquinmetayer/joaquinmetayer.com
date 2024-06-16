@@ -11,15 +11,42 @@ const getPostMetadata = (): PostMetadata[] => {
     const fileContents = fs.readFileSync(`posts/${fileName}`, "utf8");
     const matterResult = matter(fileContents);
     return {
-      title: matterResult.data.title,
       date: matterResult.data.date,
+      title: matterResult.data.title,
       slug: fileName.replace(".md", ""),
     };
   });
 
-  posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  const date = new Date();
+  const offsetInMinutes = -180;
+  date.setMinutes(date.getMinutes() + offsetInMinutes);
+  const day = date.getUTCDate().toString();
+  const month = (date.getUTCMonth() + 1);
+  const year = date.getUTCFullYear().toString();
 
-  return posts;
+  const formattedDate = `${day} ${month} ${year}`;
+
+  const filteredPosts = posts.filter((post) => {
+    const postDateParts = post.date.split(" ");
+    const postFormattedDate = `${postDateParts[0]} ${postDateParts[1]} ${postDateParts[2]}`;
+
+    return postFormattedDate <= formattedDate;
+  });
+
+  filteredPosts.sort((a, b) => {
+    const aParts = a.date;
+    const bParts = b.date;
+    const aDate = new Date(`${aParts[2]} ${aParts[1]} ${aParts[0]}`);
+    const bDate = new Date(`${bParts[2]} ${bParts[1]} ${bParts[0]}`);
+
+    return bDate.getTime() - aDate.getTime();
+  });
+
+  filteredPosts.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+
+  return filteredPosts;
 };
 
 export default getPostMetadata;
