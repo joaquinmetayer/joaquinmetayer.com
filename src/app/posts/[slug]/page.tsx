@@ -2,7 +2,7 @@ import fs from "fs";
 import Markdown from "markdown-to-jsx";
 import matter from "gray-matter";
 import getPostMetadata from "../../../../components/getPostMetadata";
-import Hero from "../../Hero";
+import Hero from "../../components/Hero";
 
 const getPostContent = (slug: string) => {
   const folder = "posts/";
