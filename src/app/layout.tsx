@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Hero from "./components/Hero";
 
 export const metadata: Metadata = {
   title: "joaquinmetayer",
@@ -12,7 +13,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body>
+        <Hero />
+        {children}
+      </body>
     </html>
   );
 }

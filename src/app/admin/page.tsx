@@ -65,7 +65,7 @@ const AdminPanel: React.FC = () => {
           if (imageExists) {
             modifiedContent = modifiedContent.replace(
               new RegExp(`\\b${match}\\b`, "g"),
-              `<a href="/images/${match}" target="_blank"><img src="/images/${match}" alt="${match}" /></a>`
+              `<a href="/${match}" target="_blank"><img src="/${match}" alt="${match}" /></a>`
             );
           }
         });

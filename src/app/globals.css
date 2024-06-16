@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: monospace;
-  filter: grayscale(1);
+  font-family: Arial, Helvetica, sans-serif;
 }
 body {
   max-width: 700px;
@@ -9,14 +8,10 @@ body {
   margin: 0 auto;
 }
 h1 {
-  margin-bottom: 0;
+  margin: 0;
 }
-a {
+h1 a {
   color: #000000;
-}
-code {
-  text-wrap: wrap;
-  color: #808080;
 }
 img {
   width: 100%;

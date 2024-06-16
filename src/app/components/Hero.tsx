@@ -76,6 +76,9 @@ export default function Hero() {
         <Link href="/">joaquinmetayer</Link>
       </h1>
       <p>
+        <a href="https://www.youtube.com/channel/UChepHxgZmukOteW-6c796wQ" target="_blank">
+          YouTube
+        </a>{" "}
         <a href="https://www.linkedin.com/in/joaquinmetayer/" target="_blank">
           LinkedIn
         </a>{" "}

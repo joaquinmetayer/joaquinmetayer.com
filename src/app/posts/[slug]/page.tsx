@@ -2,7 +2,7 @@ import fs from "fs";
 import Markdown from "markdown-to-jsx";
 import matter from "gray-matter";
 import getPostMetadata from "../../../../components/getPostMetadata";
-import Hero from "../../components/Hero";
+import Link from "next/link";
 
 const getPostContent = (slug: string) => {
   const folder = "posts/";
@@ -24,9 +24,8 @@ const PostPage = (props: any) => {
   const post = getPostContent(slug);
   return (
     <div>
-      <Hero />
       <p>
-        {post.data.title}
+        {post.data.date} {post.data.title}
       </p>
       <article>
         <Markdown>{post.content}</Markdown>
