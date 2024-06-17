@@ -31,6 +31,7 @@ export default function Hero() {
         {
           fields: {
             Email: email,
+            Origin: "joaquinmetayer",
           },
         },
       ],
