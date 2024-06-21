@@ -1,7 +1,6 @@
 ```javascript
 
-// hola si ve ves desde mi perfil de github, este readme es sobre como correr mi sitio web en local
-// si quieres saber mas de mi tienes mi sitio web y mis links a mis redes sociales en el
+// hola si me ves desde mi perfil de github, mas info en www.joaquinmetayer.com
 
 // requisitos
 // - nodejs (https://nodejs.org)
