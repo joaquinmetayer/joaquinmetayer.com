@@ -6,6 +6,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  //{children}
   return (
     <html lang="es">
       <body>
@@ -34,8 +35,7 @@ export default function RootLayout({
           <Link href={"/admin"}>Admin</Link>
         </p>
         <hr />
-        {children}
-        
+        Escribiendo...
       </body>
     </html>
   );
