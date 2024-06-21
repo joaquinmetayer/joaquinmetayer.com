@@ -17,36 +17,25 @@ const getPostMetadata = (): PostMetadata[] => {
     };
   });
 
-  const date = new Date();
-  const offsetInMinutes = -180;
-  date.setMinutes(date.getMinutes() + offsetInMinutes);
-  const day = date.getUTCDate().toString();
-  const month = (date.getUTCMonth() + 1);
-  const year = date.getUTCFullYear().toString();
+  posts.sort((a, b) => {
+    const [aDay, aMonth, aYear] = a.date.split("-");
+    const [bDay, bMonth, bYear] = b.date.split("-");
 
-  const formattedDate = `${day} ${month} ${year}`;
+    const aDate = new Date(`${aYear}-${aMonth}-${aDay}`);
+    const bDate = new Date(`${bYear}-${bMonth}-${bDay}`);
 
-  const filteredPosts = posts.filter((post) => {
-    const postDateParts = post.date.split(" ");
-    const postFormattedDate = `${postDateParts[0]} ${postDateParts[1]} ${postDateParts[2]}`;
-
-    return postFormattedDate <= formattedDate;
-  });
-
-  filteredPosts.sort((a, b) => {
-    const aParts = a.date;
-    const bParts = b.date;
-    const aDate = new Date(`${aParts[2]} ${aParts[1]} ${aParts[0]}`);
-    const bDate = new Date(`${bParts[2]} ${bParts[1]} ${bParts[0]}`);
+    if (aDate.getTime() === bDate.getTime()) {
+      const aMatch = a.slug.match(/(\d+)$/);
+      const bMatch = b.slug.match(/(\d+)$/);
+      const aSuffix = aMatch ? parseInt(aMatch[0], 10) : 0;
+      const bSuffix = bMatch ? parseInt(bMatch[0], 10) : 0;
+      return bSuffix - aSuffix;
+    }
 
     return bDate.getTime() - aDate.getTime();
   });
 
-  filteredPosts.sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-  );
-
-  return filteredPosts;
+  return posts;
 };
 
 export default getPostMetadata;

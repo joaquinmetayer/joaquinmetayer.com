@@ -7,7 +7,7 @@ export default function Home() {
     <PostPreview key={post.slug} {...post} />
   ));
 
-  return (
+  return ( 
     <>
       {postPreviews}
     </>
