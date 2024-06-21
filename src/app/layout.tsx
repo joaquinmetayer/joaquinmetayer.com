@@ -1,12 +1,16 @@
 import Link from "next/link";
 import "./globals.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Joaquin Metayer",
+};
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  //{children}
   return (
     <html lang="es">
       <body>
@@ -35,7 +39,8 @@ export default function RootLayout({
           <Link href={"/admin"}>Admin</Link>
         </p>
         <hr />
-        Escribiendo...
+        {children}
+        
       </body>
     </html>
   );

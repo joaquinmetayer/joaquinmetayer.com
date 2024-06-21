@@ -14,6 +14,7 @@ export default function AdminPanel() {
   const [images, setImages] = useState<ImageFile[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [deleteTitle, setDeleteTitle] = useState("");
+  const [videoId, setVideoId] = useState(""); 
 
   const handleImageChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (!e.target.files) return;
@@ -76,6 +77,11 @@ export default function AdminPanel() {
           }
         });
       }
+
+      if (videoId) {
+        modifiedContent = `<iframe src="https://www.youtube.com/embed/${videoId}" allowfullscreen></iframe>\n${modifiedContent}`;
+      }
+
       const currentDate = new Date();
       const day = String(currentDate.getDate());
       const month = String(currentDate.getMonth() + 1);
@@ -98,7 +104,7 @@ export default function AdminPanel() {
           "Content-Type": "application/json",
         },
       });
-      await handleCommit(newFilename);
+      //await handleCommit(newFilename);
 
       setMessage("Post created successfully");
     } catch (error) {
@@ -109,6 +115,7 @@ export default function AdminPanel() {
       setTitle("");
       setContent("");
       setImages([]);
+      setVideoId("");
       setTimeout(() => {
         setMessage("");
       }, 2500);
@@ -123,7 +130,7 @@ export default function AdminPanel() {
         method: "DELETE",
         data: { title: deleteTitle },
       });
-      await handleCommit(deleteTitle);
+      //await handleCommit(deleteTitle);
       setMessage("Post deleted successfully");
     } catch (error) {
       console.error("Error deleting the post:", error);
@@ -178,7 +185,7 @@ export default function AdminPanel() {
         <div>
           {images.map((image, index) => (
             <p key={index}>
-              <span onClick={() => handleCopyToClipboard(image.name)}>
+              <span onClick={() => handleCopyToClipboard(image.name)} style={{textDecoration:'underline', cursor: 'pointer'}}>
                 COPY
               </span>{" "}
               {image.name}{" "}
@@ -196,6 +203,15 @@ export default function AdminPanel() {
         onChange={(e) => setContent(e.target.value)}
         disabled={isLoading}
       />
+      <p>
+        <input
+          type="text"
+          placeholder="Video ID"
+          value={videoId}
+          onChange={(e) => setVideoId(e.target.value)}
+          disabled={isLoading}
+        />
+      </p>
       <p>
         <button onClick={handleSave} disabled={isLoading}>
           Publish
