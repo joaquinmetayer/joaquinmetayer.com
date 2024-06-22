@@ -62,8 +62,8 @@ const EditLinks = () => {
               placeholder="Link title"
               value={link.platform}
               onChange={(e) => handleInputChange(e, index)}
-              style={{ marginRight: '10px' }}
-            />
+              disabled={isLoading}
+                          />
           </p>
           <p>
             <input
@@ -72,12 +72,15 @@ const EditLinks = () => {
               placeholder="URL"
               value={link.url}
               onChange={(e) => handleInputChange(e, index)}
+              disabled={isLoading}
             />
           </p>
         </span>
       ))}
       <p>
-      <button onClick={handleSaveLinks}>Save Links</button>
+      <button onClick={handleSaveLinks}
+      disabled={isLoading}
+      >Save Links</button>
 
       </p>
       {message.length > 0 && <p>{message}</p>}
