@@ -7,7 +7,7 @@ interface ImageFile {
   file: File;
 }
 
-export default function CreatePost() {
+export default function SendEmail() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [message, setMessage] = useState("");
@@ -103,7 +103,7 @@ export default function CreatePost() {
           "Content-Type": "application/json",
         },
       });
-      await handleCommit(newFilename);
+      //await handleCommit(newFilename);
 
       setMessage("Post created successfully");
     } catch (error) {

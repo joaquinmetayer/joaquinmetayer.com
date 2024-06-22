@@ -16,13 +16,6 @@ body {
   max-width: 600px;
   margin: 0 auto;
 }
-h1 a {
-  color: #000;
-  text-decoration: none;
-}
-img {
-  width: 100%;
-}
 button{
   cursor: pointer;
 }
@@ -35,6 +28,6 @@ textarea {
   padding: 10px;
 }
 textarea {
-  min-height: 150px;
+  min-height: 60vh;
   resize: vertical;
 }

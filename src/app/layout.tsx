@@ -26,7 +26,6 @@ export default function RootLayout({
               </Link>{" "}
             </span>
           ))}
-          <Link href="/admin">Admin</Link>
         </p>
         <hr />
         {children}

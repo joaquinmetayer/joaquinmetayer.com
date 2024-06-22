@@ -1,15 +1,24 @@
-import React, { useState, ChangeEvent } from "react";
-import axios from "axios";
-import CreatePost from "./CreatePost";
-import DeletePost from "./DeletePost";
-import EditLinks from "./EditLinks";
+import Link from "next/link";
 
-export default function AdminPanel() {
+const AdminPanel = () => {
   return (
     <>
-      <CreatePost />
-      <DeletePost />
-      <EditLinks/>
+      <ul>
+        <li>
+          <Link href="/admin/create-post">Create post</Link>
+        </li>
+        <li>
+          <Link href="/admin/delete-post">Delete post</Link>
+        </li>
+        <li>
+          <Link href="/admin/edit-links">Edit links</Link>
+        </li>
+        <li>
+          <Link href="/admin/send-email">Send email</Link>
+        </li>
+      </ul>
     </>
   );
-}
+};
+
+export default AdminPanel;

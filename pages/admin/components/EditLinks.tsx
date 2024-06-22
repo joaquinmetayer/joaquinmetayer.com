@@ -26,7 +26,8 @@ const EditLinks = () => {
     const filteredLinks = linkList.filter((link) => link.platform && link.url);
     try {
       await axios.post('/api/save-links', { links: filteredLinks });
-      setMessage('Links saved successfully!');
+      await handleCommit('changeLinks');
+      setMessage('Links saved successfully');
     } catch (error) {
       console.error('Error saving links:', error);
       setMessage('Error saving links');
@@ -35,6 +36,16 @@ const EditLinks = () => {
         setMessage('');
       }, 2500);
     }
+  };
+
+  const handleCommit = async (gitMessage: string) => {
+    await fetch("/api/git-commit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ gitMessage }),
+    });
   };
 
   return (
@@ -62,7 +73,10 @@ const EditLinks = () => {
           </p>
         </span>
       ))}
+      <p>
       <button onClick={handleSaveLinks}>Save Links</button>
+
+      </p>
       {message.length > 0 && <p>{message}</p>}
     </>
   );
