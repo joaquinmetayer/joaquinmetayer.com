@@ -37,17 +37,18 @@ export default async function handler(req, res) {
 
     console.log("File received:", file);
 
-    const filePath = path.join(form.uploadDir, file.newFilename);
-    console.log("File will be saved to:", filePath);
+    const originalFilename = file.originalFilename;
+    const newFilePath = path.join(form.uploadDir, originalFilename);
+    console.log("File will be saved to:", newFilePath);
 
     try {
-      await fs.rename(file.filepath, filePath);
-      console.log("File moved to:", filePath);
+      await fs.rename(file.filepath, newFilePath);
+      console.log("File moved to:", newFilePath);
 
       const jsonFilePath = path.join(process.cwd(), "assets", "image-hero.json");
       const json = await fs.readFile(jsonFilePath, "utf-8");
       const data = JSON.parse(json);
-      data.url = file.newFilename;
+      data.url = originalFilename; 
 
       await fs.writeFile(jsonFilePath, JSON.stringify(data, null, 2), "utf-8");
       console.log("JSON file updated with new URL:", data.url);
