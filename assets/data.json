@@ -5,7 +5,7 @@
       "url": "https://www.youtube.com/channel/UChepHxgZmukOteW-6c796wQ"
     },
     {
-      "platform": "LinkedIn",
+      "platform": "Linke",
       "url": "https://www.linkedin.com/in/joaquinmetayer/"
     },
     {
@@ -19,6 +19,10 @@
     {
       "platform": "Email",
       "url": "mailto:joaquinmetayer@gmail.com"
+    },
+    {
+      "platform": "a ver",
+      "url": "https://www.google.com"
     }
   ],
   "heroImage": "Screenshot 2024-06-22 at 07.41.30.png"
