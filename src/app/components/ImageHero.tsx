@@ -1,10 +1,10 @@
-import imageHero from "../../../assets/image-hero.json";
+import data from "../../../assets/data.json";
 
 export default function ImageHero() {
   return (
     <>
       <img
-        src={`/images/${imageHero.url}`}
+        src={`/images/${data.heroImage}`}
         alt="joaquinmetayer"
         style={{ marginTop: "20px", filter: 'grayscale(1)' }}
       />

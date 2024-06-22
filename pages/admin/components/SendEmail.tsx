@@ -1,42 +1,35 @@
 "use client";
-import React, { useState, ChangeEvent } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
 export default function SendEmail() {
-  const [title, setTitle] = useState("");
-  const [content, setContent] = useState("");
+  const [to, setTo] = useState("");
+  const [subject, setSubject] = useState("");
+  const [text, setText] = useState("");
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSave = async () => {
+  const handleSendEmail = async () => {
     setIsLoading(true);
     try {
-      await axios.request({
-        url: "/api/delete-post",
-        method: "DELETE",
-        //data: { title: deleteTitle },
+      const response = await axios.post("/api/send-email", {
+        to,
+        subject,
+        text,
       });
-      //await handleCommit(`delete post ${deleteTitle}`);
-      setMessage("Post deleted successfully");
+      setMessage(response.data.message);
     } catch (error) {
-      console.error("Error deleting the post:", error);
-      setMessage("Error deleting the post");
+      console.error("Error sending email:", error);
+      setMessage("Error sending email");
     } finally {
       setIsLoading(false);
+      setTo("");
+      setSubject("");
+      setText("");
       setTimeout(() => {
         setMessage("");
       }, 2500);
     }
-  };
-
-  const handleCommit = async (gitMessage: string) => {
-    await fetch("/api/git-commit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ gitMessage }),
-    });
   };
 
   return (
@@ -44,21 +37,32 @@ export default function SendEmail() {
       <p>
         <input
           type="text"
-          placeholder="New post title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          placeholder="Recipient emails (comma separated)"
+          value={to}
+          onChange={(e) => setTo(e.target.value)}
           disabled={isLoading}
         />
       </p>
-      <textarea
-        placeholder="Post content"
-        value={content}
-        onChange={(e) => setContent(e.target.value)}
-        disabled={isLoading}
-      />
       <p>
-        <button onClick={handleSave} disabled={isLoading}>
-          Publish
+        <input
+          type="text"
+          placeholder="Subject"
+          value={subject}
+          onChange={(e) => setSubject(e.target.value)}
+          disabled={isLoading}
+        />
+      </p>
+      <p>
+        <textarea
+          placeholder="Email text"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+          disabled={isLoading}
+        />
+      </p>
+      <p>
+        <button onClick={handleSendEmail} disabled={isLoading}>
+          Send Email
         </button>
       </p>
       {message.length > 0 && <p> {message}</p>}

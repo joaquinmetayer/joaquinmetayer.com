@@ -24,12 +24,12 @@ export default function RootLayout({
         <p>
           {links.links.map((link, index) => (
             <span key={index}>
-              <Link key={index} href={link.url} target="_blank">
+              <Link key={index} href={link.url} target="_blank" style={{color: '#000'}}>
                 {link.platform}
               </Link>{" "}
             </span>
           ))}
-          <Link href="/admin">Admin</Link>
+          <Link href="/admin" style={{color: '#000'}}>Admin</Link>
         </p>
         <hr />
         {children}
