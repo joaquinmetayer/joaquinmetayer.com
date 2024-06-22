@@ -2,6 +2,7 @@ import Link from "next/link";
 import "./globals.css";
 import type { Metadata } from "next";
 import links from "../../assets/links.json";
+import ImageHero from "./components/ImageHero";
 
 export const metadata: Metadata = {
   title: "Joaquin Metayer",
@@ -12,9 +13,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  
   return (
     <html lang="es">
       <body>
+        <ImageHero/>
         <h1>
           <Link href="/">Joaquin Metayer</Link>
         </h1>
@@ -26,6 +29,7 @@ export default function RootLayout({
               </Link>{" "}
             </span>
           ))}
+          <Link href="/admin">Admin</Link>
         </p>
         <hr />
         {children}

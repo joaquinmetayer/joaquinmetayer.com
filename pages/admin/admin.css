@@ -31,3 +31,6 @@ textarea {
   min-height: 60vh;
   resize: vertical;
 }
+hr{
+  border: solid 0.1px #cfcfcf;
+}

@@ -103,7 +103,7 @@ export default function CreatePost() {
           "Content-Type": "application/json",
         },
       });
-      await handleCommit(newFilename);
+      await handleCommit(`new post ${newFilename}`);
 
       setMessage("Post created successfully");
     } catch (error) {
