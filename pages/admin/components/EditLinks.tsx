@@ -3,6 +3,7 @@ import axios from 'axios';
 import links from '../../../assets/links.json';
 
 const EditLinks = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const [message, setMessage] = useState('');
   const [linkList, setLinkList] = useState(
     Array.from(
@@ -23,6 +24,7 @@ const EditLinks = () => {
 
   const handleSaveLinks = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsLoading(true);
     const filteredLinks = linkList.filter((link) => link.platform && link.url);
     try {
       await axios.post('/api/save-links', { links: filteredLinks });
@@ -32,6 +34,7 @@ const EditLinks = () => {
       console.error('Error saving links:', error);
       setMessage('Error saving links');
     } finally {
+      setIsLoading(false);
       setTimeout(() => {
         setMessage('');
       }, 2500);
