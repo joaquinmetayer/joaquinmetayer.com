@@ -1,20 +1,15 @@
 "use client";
-import React, { useState, useEffect, ChangeEvent } from "react";
+import React, { useState, ChangeEvent } from "react";
 import axios from "axios";
-import data from "../../../assets/data.json";
 
-const HeroImage: React.FC = () => {
+export default function HeroImage() {
   const [image, setImage] = useState<File | null>(null);
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [currentImage, setCurrentImage] = useState("");
-
-  useEffect(() => {
-    setCurrentImage(data.heroImage);
-  }, []);
 
   const handleImageChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (!e.target.files) return;
+
     const file = e.target.files[0];
     if (/\.(png|jpe?g)$/i.test(file.name)) {
       setImage(file);
@@ -31,18 +26,15 @@ const HeroImage: React.FC = () => {
     formData.append("image", image, image.name);
 
     try {
-      const uploadResponse = await axios.post("/api/change-image", formData);
+      const uploadResponse = await axios.post(
+        "/api/change-image",
+        formData
+      );
       if (uploadResponse.status !== 200) {
         throw new Error("Error uploading image");
       }
-      const imageUrl = uploadResponse.data.url;
-      await axios.post("/api/save-data", {
-        ...data,
-        heroImage: imageUrl
-      });
       await handleCommit(`new hero image ${image.name}`);
       setMessage("Image uploaded and URL updated successfully");
-      setCurrentImage(imageUrl);
     } catch (error) {
       console.error("Error uploading image:", error);
       setMessage("Error uploading image");
@@ -54,7 +46,6 @@ const HeroImage: React.FC = () => {
       }, 2500);
     }
   };
-
   const handleCommit = async (gitMessage: string) => {
     await fetch("/api/git-commit", {
       method: "POST",
@@ -91,6 +82,4 @@ const HeroImage: React.FC = () => {
       {message.length > 0 && <p>{message}</p>}
     </>
   );
-};
-
-export default HeroImage;
+}

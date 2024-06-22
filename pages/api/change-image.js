@@ -45,10 +45,10 @@ export default async function handler(req, res) {
       await fs.rename(file.filepath, newFilePath);
       console.log("File moved to:", newFilePath);
 
-      const jsonFilePath = path.join(process.cwd(), "assets", "image-hero.json");
+      const jsonFilePath = path.join(process.cwd(), "assets", "data.json");
       const json = await fs.readFile(jsonFilePath, "utf-8");
       const data = JSON.parse(json);
-      data.url = originalFilename; 
+      data.heroImage = originalFilename; 
 
       await fs.writeFile(jsonFilePath, JSON.stringify(data, null, 2), "utf-8");
       console.log("JSON file updated with new URL:", data.url);
