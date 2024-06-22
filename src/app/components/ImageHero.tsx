@@ -6,7 +6,7 @@ export default function ImageHero() {
       <img
         src={`/images/${imageHero.url}`}
         alt="joaquinmetayer"
-        style={{ marginTop: "20px" }}
+        style={{ marginTop: "20px", filter: 'grayscale(1)' }}
       />
     </>
   );
