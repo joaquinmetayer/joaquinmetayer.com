@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Tiro+Gurmukhi:ital@0;1&display=swap');
+@font-face {
+  font-family: 'Tiro Gurmukhi';
+  src: url('/fonts/TiroGurmukhi-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   font-family: "Tiro Gurmukhi", serif;
   box-sizing: border-box;
