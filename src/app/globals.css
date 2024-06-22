@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Tiro Gurmukhi';
-  src: url('/fonts/TiroGurmukhi-Regular.ttf') format('truetype');
+  font-family: "Tiro Gurmukhi";
+  src: url("/fonts/TiroGurmukhi-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -14,19 +14,33 @@ body {
   max-width: 600px;
   margin: 0 auto;
 }
-
-h1 a{
+h1 a {
   color: #000;
   text-decoration: none;
 }
 img {
   width: 100%;
 }
-iframe{
+iframe {
   aspect-ratio: 16 / 9;
   border: none;
   width: 100%;
 }
-hr{
+hr {
   border: solid 0.1px #cfcfcf;
+}
+button {
+  cursor: pointer;
+}
+input,
+button,
+textarea {
+  width: 100%;
+  border: solid 0.1px #cfcfcf;
+  border-radius: 5px;
+  padding: 10px;
+}
+textarea {
+  min-height: 60vh;
+  resize: vertical;
 }
