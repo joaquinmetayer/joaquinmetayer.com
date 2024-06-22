@@ -7,12 +7,12 @@ export default function AdminLayout({
   children: React.ReactNode;
 }) {
   return (
-      <>
-        <h2>
-          <Link href="/admin">Admin Joaquin Metayer</Link>
-        </h2>
-        <hr />
-        {children}
-      </>
+    <>
+      <p>
+        <Link href="/admin">Admin</Link> <Link href="/">Home</Link>
+      </p>
+      <hr />
+      {children}
+    </>
   );
 }
