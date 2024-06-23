@@ -24,14 +24,6 @@ const getPostMetadata = (): PostMetadata[] => {
     const aDate = new Date(`${aYear}-${aMonth}-${aDay}`);
     const bDate = new Date(`${bYear}-${bMonth}-${bDay}`);
 
-    if (aDate.getTime() === bDate.getTime()) {
-      const aMatch = a.slug.match(/(\d+)$/);
-      const bMatch = b.slug.match(/(\d+)$/);
-      const aSuffix = aMatch ? parseInt(aMatch[0], 10) : 0;
-      const bSuffix = bMatch ? parseInt(bMatch[0], 10) : 0;
-      return bSuffix - aSuffix;
-    }
-
     return bDate.getTime() - aDate.getTime();
   });
 
