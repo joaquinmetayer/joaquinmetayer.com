@@ -64,7 +64,7 @@ export default function CreatePost() {
 
       let modifiedContent = content;
       const regex = /(\b[\w-]+\.(png|jpe?g)\b)/g;
-      const matches = new Set(modifiedContent.match(regex));
+      const matches = modifiedContent.match(regex);
 
       if (matches) {
         matches.forEach((match) => {
@@ -74,8 +74,12 @@ export default function CreatePost() {
               new RegExp(`\\b${match}\\b`, "g"),
               `<a href="/${match}" target="_blank"><img src="/images/${match}" alt="${match}" /></a>`
             );
+          } else {
+            console.log(`Image ${match} not found in selected images`);
           }
         });
+      } else {
+        console.log("No matches found in content");
       }
 
       if (videoId) {
@@ -84,7 +88,7 @@ export default function CreatePost() {
 
       const currentDate = new Date();
       const formattedDate = publishDate
-        ? new Date(publishDate).toLocaleDateString("en-GB").split("/").reverse().join("-")
+        ? publishDate.split("-").reverse().join("-")
         : `${String(currentDate.getDate()).padStart(2, "0")}-${String(currentDate.getMonth() + 1).padStart(2, "0")}-${currentDate.getFullYear()}`;
 
       const baseFilename = formattedDate.replace(/-/g, "");
