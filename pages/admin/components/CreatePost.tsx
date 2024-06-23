@@ -71,7 +71,7 @@ export default function CreatePost() {
           if (imageExists) {
             modifiedContent = modifiedContent.replace(
               new RegExp(`\\b${match}\\b`, "g"),
-              `<a href="/${match}" target="_blank"><img src="/${match}" alt="${match}" /></a>`
+              `<a href="/${match}" target="_blank"><img src="/images/${match}" alt="${match}" /></a>`
             );
           }
         });
@@ -82,8 +82,8 @@ export default function CreatePost() {
       }
 
       const currentDate = new Date();
-      const day = String(currentDate.getDate());
-      const month = String(currentDate.getMonth() + 1);
+      const day = String(currentDate.getDate()).padStart(2, "0");
+      const month = String(currentDate.getMonth() + 1).padStart(2, "0");
       const year = currentDate.getFullYear().toString();
       const formattedDate = `${day}-${month}-${year}`;
       const baseFilename = `${day}${month}${year}`;
@@ -103,7 +103,7 @@ export default function CreatePost() {
           "Content-Type": "application/json",
         },
       });
-      await handleCommit(newFilename);
+      await handleCommit(`new post ${newFilename}`);
 
       setMessage("Post created successfully");
     } catch (error) {

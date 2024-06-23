@@ -16,6 +16,9 @@ const AdminPanel = () => {
         <li>
           <Link href="/admin/send-email">Send email</Link>
         </li>
+        <li>
+          <Link href="/admin/change-image">Hero image</Link>
+        </li>
       </ul>
     </>
   );

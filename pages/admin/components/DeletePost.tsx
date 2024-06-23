@@ -15,7 +15,7 @@ export default function DeletePost() {
         method: "DELETE",
         data: { title: deleteTitle },
       });
-      await handleCommit(deleteTitle);
+      await handleCommit(`delete post ${deleteTitle}`);
       setMessage("Post deleted successfully");
     } catch (error) {
       console.error("Error deleting the post:", error);
