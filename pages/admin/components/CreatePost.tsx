@@ -116,14 +116,6 @@ export default function CreatePost() {
       setMessage("Error creating post");
     } finally {
       setIsLoading(false);
-      setTitle("");
-      setContent("");
-      setImages([]);
-      setVideoId("");
-      setPublishDate("");
-      setTimeout(() => {
-        setMessage("");
-      }, 2500);
     }
   };
 

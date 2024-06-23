@@ -11,7 +11,7 @@ export const config = {
 export default async function handler(req, res) {
   if (req.method === "POST") {
     const form = new IncomingForm();
-    form.uploadDir = path.join(process.cwd(), 'public/');
+    form.uploadDir = path.join(process.cwd(), 'public/images');
     form.keepExtensions = true;
     form.multiples = true;
 

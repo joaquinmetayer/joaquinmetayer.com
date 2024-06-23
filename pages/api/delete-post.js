@@ -34,7 +34,7 @@ export default async function handler(req, res) {
     }
 
     for (const imagePath of imagePaths) {
-      const fullImagePath = path.join(process.cwd(), 'public', imagePath);
+      const fullImagePath = path.join(process.cwd(), 'public/images', imagePath);
       try {
         await fs.unlink(fullImagePath);
         console.log(`Image deleted: ${fullImagePath}`);
