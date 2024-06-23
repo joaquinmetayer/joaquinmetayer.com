@@ -26,9 +26,6 @@ export default async function handler(req, res) {
       console.error("Error parsing form:", err);
       return res.status(500).json({ error: "Error uploading file" });
     }
-
-    console.log("Files received:", files);
-
     const file = files.image ? files.image[0] : null;
     if (!file) {
       console.error("No file received");
@@ -48,15 +45,16 @@ export default async function handler(req, res) {
       const jsonFilePath = path.join(process.cwd(), "assets", "data.json");
       const json = await fs.readFile(jsonFilePath, "utf-8");
       const data = JSON.parse(json);
-      data.heroImage = originalFilename; 
+      data.heroImage = originalFilename;
+      data.heroWidth = fields.heroWidth; // Guardar el valor de heroWidth
 
       await fs.writeFile(jsonFilePath, JSON.stringify(data, null, 2), "utf-8");
-      console.log("JSON file updated with new URL:", data.url);
+      console.log("JSON file updated with new URL and heroWidth:", data);
 
-      return res.status(200).json({ message: "File uploaded and URL updated successfully" });
+      return res.status(200).json({ message: "File uploaded and data updated successfully" });
     } catch (error) {
-      console.error("Error handling file upload or updating URL:", error);
-      return res.status(500).json({ error: "Error handling file upload or updating URL" });
+      console.error("Error handling file upload or updating data:", error);
+      return res.status(500).json({ error: "Error handling file upload or updating data" });
     }
   });
 }

@@ -1,18 +1,9 @@
-@font-face {
-  font-family: 'Noto Serif';
-  src: url('/fonts/NotoSerif-VariableFont_wdth\,wght.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
 * {
-  font-family: "Noto Serif", serif;
-  box-sizing: border-box;
-  color: #000;
+  font-family: monospace;
 }
 body {
-  max-width: 600px;
-  padding: 40px 20px;
-  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
 }
 img {
   width: 100%;

@@ -9,5 +9,8 @@
       "url": "https://www.linkedin.com/in/joaquinmetayer/"
     }
   ],
-  "heroImage": "joaquinmetayer.jpg"
+  "heroImage": "IMG_4809.png",
+  "heroWidth": [
+    "50%"
+  ]
 }

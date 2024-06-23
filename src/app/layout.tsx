@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body>
-        <img src={`/images/${data.heroImage}`} alt="joaquinmetayer"/>
+        <img src={`/images/${data.heroImage}`} alt="joaquinmetayer" style={{width:`${data.heroWidth}`}}/>
         <p>
           <Link href="/">joaquinmetayer</Link>{" / "}
           {data.links.map((link, index) => (

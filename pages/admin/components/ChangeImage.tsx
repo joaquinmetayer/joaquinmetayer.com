@@ -4,6 +4,7 @@ import axios from "axios";
 
 export default function HeroImage() {
   const [image, setImage] = useState<File | null>(null);
+  const [heroWidth, setHeroWidth] = useState<string>("");
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
@@ -18,12 +19,17 @@ export default function HeroImage() {
     }
   };
 
+  const handleWidthChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setHeroWidth(e.target.value);
+  };
+
   const handleUpload = async () => {
     if (!image) return;
 
     setIsLoading(true);
     const formData = new FormData();
     formData.append("image", image, image.name);
+    formData.append("heroWidth", heroWidth);
 
     try {
       const uploadResponse = await axios.post("/api/change-image", formData);
@@ -38,6 +44,7 @@ export default function HeroImage() {
     } finally {
       setIsLoading(false);
       setImage(null);
+      setHeroWidth("");
       setTimeout(() => {
         setMessage("");
       }, 2500);
@@ -72,6 +79,16 @@ export default function HeroImage() {
         />
       </p>
       {image && <p>Selected image: {image.name}</p>}
+      <p>
+        <input
+          placeholder="Hero width"
+          type="text"
+          id="heroWidth"
+          value={heroWidth}
+          onChange={handleWidthChange}
+          disabled={isLoading}
+        />
+      </p>
       <p>
         <button onClick={handleUpload} disabled={isLoading || !image}>
           Upload Hero Image
