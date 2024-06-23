@@ -14,13 +14,16 @@ body {
   padding: 20px;
   margin: 0 auto;
 }
+button {
+  cursor: pointer;
+}
 input,
 button,
 textarea {
   width: 100%;
-  padding: 10px;
+  border: solid 0.1px #cfcfcf;
   border-radius: 5px;
-  border: solid 0.5px #00000050;
+  padding: 10px;
 }
 textarea {
   min-height: 60vh;

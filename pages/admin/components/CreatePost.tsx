@@ -14,6 +14,7 @@ export default function CreatePost() {
   const [images, setImages] = useState<ImageFile[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [videoId, setVideoId] = useState("");
+  const [publishDate, setPublishDate] = useState("");
 
   const handleImageChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (!e.target.files) return;
@@ -82,11 +83,11 @@ export default function CreatePost() {
       }
 
       const currentDate = new Date();
-      const day = String(currentDate.getDate()).padStart(2, "0");
-      const month = String(currentDate.getMonth() + 1).padStart(2, "0");
-      const year = currentDate.getFullYear().toString();
-      const formattedDate = `${day}-${month}-${year}`;
-      const baseFilename = `${day}${month}${year}`;
+      const formattedDate = publishDate
+        ? new Date(publishDate).toISOString().split("T")[0]
+        : `${currentDate.getFullYear()}-${String(currentDate.getMonth() + 1).padStart(2, "0")}-${String(currentDate.getDate()).padStart(2, "0")}`;
+
+      const baseFilename = formattedDate.replace(/-/g, "");
       const checkFilenameResponse = await axios.post("/api/check-filename", {
         filename: baseFilename,
       });
@@ -115,6 +116,7 @@ export default function CreatePost() {
       setContent("");
       setImages([]);
       setVideoId("");
+      setPublishDate("");
       setTimeout(() => {
         setMessage("");
       }, 2500);
@@ -189,6 +191,15 @@ export default function CreatePost() {
           placeholder="YouTube video ID"
           value={videoId}
           onChange={(e) => setVideoId(e.target.value)}
+          disabled={isLoading}
+        />
+      </p>
+      <p>
+        <input
+          type="date"
+          placeholder="Publish date"
+          value={publishDate}
+          onChange={(e) => setPublishDate(e.target.value)}
           disabled={isLoading}
         />
       </p>
