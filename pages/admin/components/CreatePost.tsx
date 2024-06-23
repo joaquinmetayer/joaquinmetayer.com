@@ -84,8 +84,8 @@ export default function CreatePost() {
 
       const currentDate = new Date();
       const formattedDate = publishDate
-        ? new Date(publishDate).toISOString().split("T")[0]
-        : `${currentDate.getFullYear()}-${String(currentDate.getMonth() + 1).padStart(2, "0")}-${String(currentDate.getDate()).padStart(2, "0")}`;
+        ? new Date(publishDate).toLocaleDateString("en-GB").split("/").reverse().join("-")
+        : `${String(currentDate.getDate()).padStart(2, "0")}-${String(currentDate.getMonth() + 1).padStart(2, "0")}-${currentDate.getFullYear()}`;
 
       const baseFilename = formattedDate.replace(/-/g, "");
       const checkFilenameResponse = await axios.post("/api/check-filename", {
