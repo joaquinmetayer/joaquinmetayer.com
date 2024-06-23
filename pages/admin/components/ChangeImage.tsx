@@ -26,10 +26,7 @@ export default function HeroImage() {
     formData.append("image", image, image.name);
 
     try {
-      const uploadResponse = await axios.post(
-        "/api/change-image",
-        formData
-      );
+      const uploadResponse = await axios.post("/api/change-image", formData);
       if (uploadResponse.status !== 200) {
         throw new Error("Error uploading image");
       }
@@ -46,6 +43,7 @@ export default function HeroImage() {
       }, 2500);
     }
   };
+
   const handleCommit = async (gitMessage: string) => {
     await fetch("/api/git-commit", {
       method: "POST",

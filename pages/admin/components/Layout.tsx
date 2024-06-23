@@ -9,7 +9,13 @@ export default function AdminLayout({
   return (
     <>
       <p>
-        <Link href="/" target="_blank">joaquinmetayer</Link>{" / "}<Link href="/admin">admin</Link>{" / "}<Link href="/admin">logout</Link>
+        <Link href="/" target="_blank">
+          joaquinmetayer
+        </Link>
+        {" / "}
+        <Link href="/admin">admin</Link>
+        {" / "}
+        <Link href="/admin">logout</Link>
       </p>
       <hr />
       {children}
