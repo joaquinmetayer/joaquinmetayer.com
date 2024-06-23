@@ -1,22 +1,26 @@
+@font-face {
+  font-family: 'Noto Serif';
+  src: url('/fonts/NotoSerif-VariableFont_wdth\,wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 * {
-  font-family: monospace;
+  font-family: "Noto Serif", serif;
   box-sizing: border-box;
+  color: #000;
 }
 body {
-  max-width: 800px;
-}
-img {
-  width: 100%;
-}
-iframe {
-  aspect-ratio: 16 / 9;
-  border: none;
-  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  margin: 0 auto;
 }
 input,
 button,
 textarea {
   width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: solid 0.5px #00000050;
 }
 textarea {
   min-height: 60vh;

@@ -15,9 +15,9 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body>
+        <img src={`/images/${data.heroImage}`} alt="joaquinmetayer"/>
         <p>
           <Link href="/">joaquinmetayer</Link>{" / "}
-          <Link href="/admin">admin</Link>{" / "}
           {data.links.map((link, index) => (
             <span key={index}>
               <Link key={index} href={link.url} target="_blank">
@@ -27,6 +27,7 @@ export default function RootLayout({
           ))}
         </p>
         <hr />
+
         {children}
       </body>
     </html>
