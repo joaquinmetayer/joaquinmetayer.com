@@ -1,13 +1,12 @@
 {
   "links": [
     {
-      "platform": "YouTube",
+      "platform": "youtube",
       "url": "https://www.youtube.com/channel/UChepHxgZmukOteW-6c796wQ"
     },
     {
-      "platform": "LinkedIn",
+      "platform": "linkedin",
       "url": "https://www.linkedin.com/in/joaquinmetayer/"
     }
-  ],
-  "heroImage": "IMG_4809.png"
+  ]
 }

@@ -15,7 +15,7 @@ const EditLinks: React.FC = () => {
   useEffect(() => {
     setLinkList(
       Array.from(
-        { length: 10 },
+        { length: 5 },
         (_, i) => data.links[i] || { platform: "", url: "" }
       )
     );

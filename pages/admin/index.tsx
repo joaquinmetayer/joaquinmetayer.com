@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
-import AdminPanel from "./components/AdminPanel";
 import "./admin.css";
-import AdminLayout from "./components/Layout";
+import Link from "next/link";
+import CreatePost from "./components/CreatePost";
+import DeletePost from "./components/DeletePost";
+import EditLinks from "./components/EditLinks";
 
 const Admin: React.FC = () => {
   const [isLocal, setIsLocal] = useState(false);
@@ -15,15 +17,21 @@ const Admin: React.FC = () => {
 
   return (
     <>
-      <AdminLayout>
-        {isLocal ? (
-          <>
-            <AdminPanel />
-          </>
-        ) : (
-          <p>Administrator panel only in localhost!</p>
-        )}
-      </AdminLayout>
+      <p>
+        <Link href="/">joaquinmetayer</Link>
+        {" / "}
+        <Link href="/admin">admin</Link>
+      </p>
+      <hr />
+      {isLocal ? (
+        <>
+          <CreatePost />
+          <DeletePost />
+          <EditLinks />
+        </>
+      ) : (
+        <p>Administrator panel only in localhost</p>
+      )}
     </>
   );
 };
