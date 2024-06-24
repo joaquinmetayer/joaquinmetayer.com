@@ -11,15 +11,15 @@
     {
       "platform": "LinkedIn",
       "url": "https://www.linkedin.com/in/joaquinmetayer"
-    },  
+    },
     {
       "platform": "GitHub",
       "url": "https://www.github.com/joaquinmetayer"
     }
   ],
-  "heroImage": "IMG_4718.png",
+  "heroImage": "2024-06-24181920.png",
   "heroWidth": [
-    "40%"
+    "100%"
   ],
   "isVisible": true
 }
