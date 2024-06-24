@@ -64,22 +64,24 @@ export default function Hero() {
           </span>
         ))}
       </p>
-      <div style={{ width: `${data.heroWidth}` }}>
-        <input
-          type="email"
-          placeholder="tuemail@email.com"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          disabled={isSubscribing}
-        />
-        <p>
-          <button onClick={handleSubscribe} disabled={isSubscribing || !email}>
-            {isSubscribing ? "Subscribiendo..." : "Subscribirme"}
-          </button>
-        </p>
-        {message && <p>{message}</p>}
-      </div>
+
       <hr />
     </>
   );
 }
+
+//<div style={{ width: `${data.heroWidth}` }}>
+//  <input
+//    type="email"
+//    placeholder="tuemail@email.com"
+//    value={email}
+//    onChange={(e) => setEmail(e.target.value)}
+//    disabled={isSubscribing}
+//  />
+//  <p>
+//    <button onClick={handleSubscribe} disabled={isSubscribing || !email}>
+//      {isSubscribing ? "Subscribiendo..." : "Subscribirme"}
+//    </button>
+//  </p>
+//  {message && <p>{message}</p>}
+//</div>;

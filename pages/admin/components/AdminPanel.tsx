@@ -10,9 +10,6 @@ const AdminPanel = () => {
         <Link href="/admin/delete-post">Delete post</Link>
       </p>
       <p>
-        <Link href="/admin/send-email">Send email</Link>
-      </p>
-      <p>
         <Link href="/admin/change-image">Hero image</Link>
       </p>
       <p>
@@ -23,3 +20,7 @@ const AdminPanel = () => {
 };
 
 export default AdminPanel;
+
+//<p>
+//  <Link href="/admin/send-email">Send email</Link>
+//</p>
