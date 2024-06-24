@@ -8,6 +8,10 @@ const getPostMetadata = (): PostMetadata[] => {
   const markdownPosts = files.filter((file) => file.endsWith(".md"));
 
   const currentDate = new Date();
+<<<<<<< HEAD
+=======
+  currentDate.setDate(currentDate.getDate() - 1);
+>>>>>>> dev
 
   const posts = markdownPosts
     .map((fileName) => {
@@ -22,7 +26,11 @@ const getPostMetadata = (): PostMetadata[] => {
     .filter((post) => {
       const [day, month, year] = post.date.split("-");
       const postDate = new Date(`${year}-${month}-${day}`);
+<<<<<<< HEAD
       return postDate <= currentDate;
+=======
+      return postDate < currentDate;
+>>>>>>> dev
     });
 
   posts.sort((a, b) => {

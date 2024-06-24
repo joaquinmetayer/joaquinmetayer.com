@@ -14,8 +14,6 @@ export default function AdminLayout({
         </Link>
         {" / "}
         <Link href="/admin">Admin</Link>
-        {" / "}
-        <Link href="/admin">Logout</Link>
       </p>
       <hr />
       {children}

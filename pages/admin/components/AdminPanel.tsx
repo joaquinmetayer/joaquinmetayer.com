@@ -1,9 +1,6 @@
 import Link from "next/link";
 
 const AdminPanel = () => {
-  //<li>
-  //  <Link href="/admin/send-email">Send email</Link>
-  //</li>
   return (
     <>
       <p>
@@ -23,3 +20,7 @@ const AdminPanel = () => {
 };
 
 export default AdminPanel;
+
+//<p>
+//  <Link href="/admin/send-email">Send email</Link>
+//</p>

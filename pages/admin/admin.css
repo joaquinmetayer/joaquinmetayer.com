@@ -3,8 +3,14 @@
   box-sizing: border-box;
 }
 body {
-  max-width: 800px;
-  padding: 10px 20px;
+  padding: 0 5px;
+  max-width: 1000px;
+}
+hr {
+  border: solid 0.1px #808080;
+}
+button {
+  cursor: pointer;
 }
 input,
 button,

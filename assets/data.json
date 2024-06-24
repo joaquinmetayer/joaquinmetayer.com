@@ -2,15 +2,23 @@
   "links": [
     {
       "platform": "YouTube",
-      "url": "https://www.youtube.com/channel/UChepHxgZmukOteW-6c796wQ"
+      "url": "https://www.youtube.com/@joaquinmetayer"
+    },
+    {
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/joaquinmetayer"
     },
     {
       "platform": "LinkedIn",
-      "url": "https://www.linkedin.com/in/joaquinmetayer/"
+      "url": "https://www.linkedin.com/in/joaquinmetayer"
+    },  
+    {
+      "platform": "GitHub",
+      "url": "https://www.github.com/joaquinmetayer"
     }
   ],
   "heroImage": "IMG_4809.png",
   "heroWidth": [
-    "50%"
+    "25%"
   ]
 }
