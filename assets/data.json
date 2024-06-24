@@ -11,6 +11,10 @@
     {
       "platform": "LinkedIn",
       "url": "https://www.linkedin.com/in/joaquinmetayer"
+    },  
+    {
+      "platform": "GitHub",
+      "url": "https://www.github.com/joaquinmetayer"
     }
   ],
   "heroImage": "IMG_4809.png",
