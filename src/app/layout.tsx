@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import data from "../../assets/data.json";
 
 export const metadata: Metadata = {
-  title: "joaquinmetayer",
+  title: "Joaquin Metayer",
 };
 
 export default function RootLayout({
