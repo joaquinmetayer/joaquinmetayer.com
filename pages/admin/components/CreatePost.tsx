@@ -72,7 +72,7 @@ export default function CreatePost() {
           if (imageExists) {
             modifiedContent = modifiedContent.replace(
               new RegExp(`\\b${match}\\b`, "g"),
-              `<a href="/${match}" target="_blank"><img src="/images/${match}" alt="${match}" /></a>`
+              `<a href="/images/${match}" target="_blank"><img src="/images/${match}" alt="${match}" /></a>`
             );
           } else {
             console.log(`Image ${match} not found in selected images`);
