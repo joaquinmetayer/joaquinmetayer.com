@@ -5,6 +5,7 @@ import axios from "axios";
 export default function HeroImage() {
   const [image, setImage] = useState<File | null>(null);
   const [heroWidth, setHeroWidth] = useState<string>("");
+  const [isVisible, setIsVisible] = useState<boolean>(false);
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
@@ -23,6 +24,10 @@ export default function HeroImage() {
     setHeroWidth(e.target.value);
   };
 
+  const handleVisibilityChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setIsVisible(e.target.checked);
+  };
+
   const handleUpload = async () => {
     if (!image) return;
 
@@ -30,6 +35,7 @@ export default function HeroImage() {
     const formData = new FormData();
     formData.append("image", image, image.name);
     formData.append("heroWidth", heroWidth);
+    formData.append("isVisible", JSON.stringify(isVisible));
 
     try {
       const uploadResponse = await axios.post("/api/change-image", formData);
@@ -45,6 +51,7 @@ export default function HeroImage() {
       setIsLoading(false);
       setImage(null);
       setHeroWidth("");
+      setIsVisible(false);
       setTimeout(() => {
         setMessage("");
       }, 2500);
@@ -87,6 +94,17 @@ export default function HeroImage() {
           value={heroWidth}
           onChange={handleWidthChange}
           disabled={isLoading}
+        />
+      </p>
+      <p style={{ display: "flex", alignItems: "center" }}>
+        <label htmlFor="isVisible">Is visible: </label>{" "}
+        <input
+          type="checkbox"
+          id="isVisible"
+          checked={isVisible}
+          onChange={handleVisibilityChange}
+          disabled={isLoading}
+          style={{ width: "auto" }}
         />
       </p>
       <p>
