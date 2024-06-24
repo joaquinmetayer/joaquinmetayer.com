@@ -52,7 +52,7 @@ export default function Hero() {
         <img
           src={`/images/${data.heroImage}`}
           alt="joaquinmetayer"
-          style={{ width: `${data.heroWidth}` }}
+          style={{ width: `${data.heroWidth}`, paddingTop:'5px' }}
         />
       )}
 
