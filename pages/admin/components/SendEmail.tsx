@@ -37,15 +37,6 @@ export default function SendEmail() {
       <p>
         <input
           type="text"
-          placeholder="Recipient emails (comma separated)"
-          value={to}
-          onChange={(e) => setTo(e.target.value)}
-          disabled={isLoading}
-        />
-      </p>
-      <p>
-        <input
-          type="text"
           placeholder="Subject"
           value={subject}
           onChange={(e) => setSubject(e.target.value)}
@@ -62,7 +53,12 @@ export default function SendEmail() {
       </p>
       <p>
         <button onClick={handleSendEmail} disabled={isLoading}>
-          Send Email
+          Test email
+        </button>
+      </p>
+      <p>
+        <button onClick={handleSendEmail} disabled={isLoading}>
+          Send email
         </button>
       </p>
       {message.length > 0 && <p> {message}</p>}

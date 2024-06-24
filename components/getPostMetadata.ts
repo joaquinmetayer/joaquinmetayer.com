@@ -7,15 +7,24 @@ const getPostMetadata = (): PostMetadata[] => {
   const files = fs.readdirSync(folder);
   const markdownPosts = files.filter((file) => file.endsWith(".md"));
 
-  const posts = markdownPosts.map((fileName) => {
-    const fileContents = fs.readFileSync(`posts/${fileName}`, "utf8");
-    const matterResult = matter(fileContents);
-    return {
-      date: matterResult.data.date,
-      title: matterResult.data.title,
-      slug: fileName.replace(".md", ""),
-    };
-  });
+  const currentDate = new Date();
+  currentDate.setDate(currentDate.getDate() - 1);
+
+  const posts = markdownPosts
+    .map((fileName) => {
+      const fileContents = fs.readFileSync(`posts/${fileName}`, "utf8");
+      const matterResult = matter(fileContents);
+      return {
+        date: matterResult.data.date,
+        title: matterResult.data.title,
+        slug: fileName.replace(".md", ""),
+      };
+    })
+    .filter((post) => {
+      const [day, month, year] = post.date.split("-");
+      const postDate = new Date(`${year}-${month}-${day}`);
+      return postDate < currentDate;
+    });
 
   posts.sort((a, b) => {
     const [aDay, aMonth, aYear] = a.date.split("-");

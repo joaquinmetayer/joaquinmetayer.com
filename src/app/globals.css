@@ -33,7 +33,9 @@ textarea {
   border-radius: 5px;
   padding: 10px;
 }
-textarea {
-  min-height: 60vh;
-  resize: vertical;
+a:visited {
+  color: #000;
+}
+a {
+  color: #385185;
 }
