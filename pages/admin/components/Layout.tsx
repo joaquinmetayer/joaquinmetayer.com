@@ -10,12 +10,12 @@ export default function AdminLayout({
     <>
       <p>
         <Link href="/" target="_blank">
-          joaquinmetayer
+          Joaquin Metayer
         </Link>
         {" / "}
-        <Link href="/admin">admin</Link>
+        <Link href="/admin">Admin</Link>
         {" / "}
-        <Link href="/admin">logout</Link>
+        <Link href="/admin">Logout</Link>
       </p>
       <hr />
       {children}

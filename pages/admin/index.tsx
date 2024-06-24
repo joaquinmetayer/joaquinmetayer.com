@@ -21,7 +21,7 @@ const Admin: React.FC = () => {
             <AdminPanel />
           </>
         ) : (
-          <p>Administrator panel only in localhost!</p>
+          <p>Administrator panel only in localhost</p>
         )}
       </AdminLayout>
     </>

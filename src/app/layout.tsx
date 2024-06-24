@@ -12,12 +12,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  //<input type="email" placeholder="tuemail@email.com"/>
+  //<p><button >Subscribirme</button></p>
   return (
     <html lang="es">
       <body>
         <img src={`/images/${data.heroImage}`} alt="joaquinmetayer" style={{width:`${data.heroWidth}`}}/>
         <p>
-          <Link href="/">joaquinmetayer</Link>{" / "}
+          <Link href="/">Joaquin Metayer</Link>{" / "}
           {data.links.map((link, index) => (
             <span key={index}>
               <Link key={index} href={link.url} target="_blank">
@@ -26,8 +28,10 @@ export default function RootLayout({
             </span>
           ))}
         </p>
+        <div style={{width:`${data.heroWidth}`}}>
+        
+        </div>
         <hr />
-
         {children}
       </body>
     </html>
