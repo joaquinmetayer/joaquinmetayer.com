@@ -48,11 +48,14 @@ export default function Hero() {
 
   return (
     <>
-      <img
-        src={`/images/${data.heroImage}`}
-        alt="joaquinmetayer"
-        style={{ width: `${data.heroWidth}` }}
-      />
+      {data.isVisible && (
+        <img
+          src={`/images/${data.heroImage}`}
+          alt="joaquinmetayer"
+          style={{ width: `${data.heroWidth}` }}
+        />
+      )}
+
       <p>
         <Link href="/">Joaquin Metayer</Link>
         {" / "}

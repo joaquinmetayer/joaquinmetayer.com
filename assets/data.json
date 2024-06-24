@@ -20,5 +20,6 @@
   "heroImage": "IMG_4718.png",
   "heroWidth": [
     "40%"
-  ]
+  ],
+  "isVisible": false
 }
