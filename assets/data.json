@@ -15,15 +15,11 @@
     {
       "platform": "GitHub",
       "url": "https://www.github.com/joaquinmetayer"
-    },
-    {
-      "platform": "localhost",
-      "url": "http://localhost:3000"
     }
   ],
-  "heroImage": "2024-06-24181920.png",
+  "heroImage": "IMG_4718.png",
   "heroWidth": [
-    "100%"
+    "50%"
   ],
   "isVisible": true
 }
