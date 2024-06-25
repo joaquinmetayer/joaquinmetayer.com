@@ -20,7 +20,3 @@ const AdminPanel = () => {
 };
 
 export default AdminPanel;
-
-//<p>
-//  <Link href="/admin/send-email">Send email</Link>
-//</p>

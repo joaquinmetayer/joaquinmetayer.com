@@ -1,4 +1,5 @@
 ```javascript
+// hola si me ves desde github, mas info en www.joaquinmetayer.com
 
 // requisitos
 // - nodejs (https://nodejs.org)
