@@ -1,6 +1,6 @@
-```javascript
-// hola si me ves desde github, mas info en www.joaquinmetayer.com
+## hello stalker, mas info en www.joaquinmetayer.com
 
+```javascript
 // requisitos
 // - nodejs (https://nodejs.org)
 // - git (https://git-scm.com)
