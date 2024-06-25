@@ -1,22 +1,17 @@
 * {
   font-family: monospace;
   box-sizing: border-box;
+  color: #000000;
 }
 body {
   padding: 0 5px;
-  max-width: 1000px;
-}
-hr {
-  border: solid 0.1px #808080;
-}
-button {
-  cursor: pointer;
+  max-width: 800px;
 }
 input,
 button,
 textarea {
   width: 100%;
-  border: solid 0.1px #cfcfcf;
+  border: solid 0.1px #00000010;
   border-radius: 5px;
   padding: 5px;
 }
