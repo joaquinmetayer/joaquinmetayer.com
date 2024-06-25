@@ -22,10 +22,7 @@ export default function DeletePost() {
       setMessage("Error deleting the post");
     } finally {
       setIsLoading(false);
-      setDeleteTitle("");
-      setTimeout(() => {
-        setMessage("");
-      }, 2500);
+      window.location.reload()
     }
   };
 

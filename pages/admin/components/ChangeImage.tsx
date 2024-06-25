@@ -47,12 +47,7 @@ export default function HeroImage() {
       setMessage("Error uploading image");
     } finally {
       setIsLoading(false);
-      setImage(null);
-      setImageName("");
-      setHeroWidth("");
-      setTimeout(() => {
-        setMessage("");
-      }, 2500);
+      window.location.reload()
     }
   };
 

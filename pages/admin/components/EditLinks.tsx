@@ -47,9 +47,7 @@ const EditLinks: React.FC = () => {
       setMessage("Error saving links");
     } finally {
       setIsLoading(false);
-      setTimeout(() => {
-        setMessage("");
-      }, 2500);
+      window.location.reload()
     }
   };
 

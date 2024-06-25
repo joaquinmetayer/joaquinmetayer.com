@@ -23,12 +23,7 @@ export default function SendEmail() {
       setMessage("Error sending email");
     } finally {
       setIsLoading(false);
-      setTo("");
-      setSubject("");
-      setText("");
-      setTimeout(() => {
-        setMessage("");
-      }, 2500);
+      window.location.reload()
     }
   };
 

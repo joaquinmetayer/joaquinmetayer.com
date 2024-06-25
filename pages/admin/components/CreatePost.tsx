@@ -118,6 +118,7 @@ export default function CreatePost() {
       setMessage("Error creating post");
     } finally {
       setIsLoading(false);
+      window.location.reload()
     }
   };
 

@@ -42,7 +42,7 @@ export default function Hero() {
       setMessage("Error de subscripción");
     } finally {
       setIsSubscribing(false);
-      setTimeout(() => setMessage(""), 5000);
+      window.location.reload()
     }
   };
 
