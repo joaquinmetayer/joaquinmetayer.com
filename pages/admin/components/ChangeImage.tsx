@@ -1,11 +1,12 @@
 "use client";
 import React, { useState, ChangeEvent } from "react";
 import axios from "axios";
+import { v4 as uuidv4 } from "uuid";
 
 export default function HeroImage() {
   const [image, setImage] = useState<File | null>(null);
+  const [imageName, setImageName] = useState<string>("");
   const [heroWidth, setHeroWidth] = useState<string>("");
-  const [isVisible, setIsVisible] = useState<boolean>(false);
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
@@ -14,7 +15,9 @@ export default function HeroImage() {
 
     const file = e.target.files[0];
     if (/\.(png|jpe?g)$/i.test(file.name)) {
+      const newImageName = `${uuidv4()}.${file.name.split(".").pop()}`;
       setImage(file);
+      setImageName(newImageName);
     } else {
       setMessage("Please select a valid image file (png or jpg/jpeg)");
     }
@@ -24,25 +27,20 @@ export default function HeroImage() {
     setHeroWidth(e.target.value);
   };
 
-  const handleVisibilityChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setIsVisible(e.target.checked);
-  };
-
   const handleUpload = async () => {
     if (!image) return;
 
     setIsLoading(true);
     const formData = new FormData();
-    formData.append("image", image, image.name);
+    formData.append("image", image, imageName);
     formData.append("heroWidth", heroWidth);
-    formData.append("isVisible", JSON.stringify(isVisible));
 
     try {
       const uploadResponse = await axios.post("/api/change-image", formData);
       if (uploadResponse.status !== 200) {
         throw new Error("Error uploading image");
       }
-      await handleCommit(`new hero image ${image.name}`);
+      await handleCommit(`new hero image ${imageName}`);
       setMessage("Image uploaded and URL updated successfully");
     } catch (error) {
       console.error("Error uploading image:", error);
@@ -50,8 +48,8 @@ export default function HeroImage() {
     } finally {
       setIsLoading(false);
       setImage(null);
+      setImageName("");
       setHeroWidth("");
-      setIsVisible(false);
       setTimeout(() => {
         setMessage("");
       }, 2500);
@@ -85,26 +83,15 @@ export default function HeroImage() {
           disabled={isLoading}
         />
       </p>
-      {image && <p>Selected image: {image.name}</p>}
+      {image && <p>Selected image: {imageName}</p>}
       <p>
         <input
-          placeholder="Hero width"
+          placeholder="Hero width in pixels or %"
           type="text"
           id="heroWidth"
           value={heroWidth}
           onChange={handleWidthChange}
           disabled={isLoading}
-        />
-      </p>
-      <p style={{ display: "flex", alignItems: "center" }}>
-        <label htmlFor="isVisible">Is visible: </label>{" "}
-        <input
-          type="checkbox"
-          id="isVisible"
-          checked={isVisible}
-          onChange={handleVisibilityChange}
-          disabled={isLoading}
-          style={{ width: "auto" }}
         />
       </p>
       <p>
