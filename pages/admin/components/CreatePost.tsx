@@ -36,7 +36,7 @@ export default function CreatePost() {
 
     setImages(selectedImages);
     console.log("Selected images:", selectedImages);
-  };
+  };// REPLANTEAR CAMBIO A IMAGEN CON ID Y QUITAR CON ESPACIO SIOSI
 
   const handleClearImages = () => {
     setImages([]);

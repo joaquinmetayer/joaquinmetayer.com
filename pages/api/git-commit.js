@@ -7,7 +7,7 @@ export default async function handler(req, res) {
     const git = simpleGit();
 
     try {
-      await git.pull("origin", "main");
+      await git.pull("origin", "main");//AGREGAR QUE HAGA MERGE
       const addResult = await git.add("./*");
       const commitResult = await git.commit(gitMessage);
       const pushResult = await git.push("origin", "main");

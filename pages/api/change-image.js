@@ -46,8 +46,7 @@ export default async function handler(req, res) {
       const json = await fs.readFile(jsonFilePath, "utf-8");
       const data = JSON.parse(json);
       data.heroImage = originalFilename;
-      data.heroWidth = fields.heroWidth; // Guardar el valor de heroWidth
-
+      data.heroWidth = fields.heroWidth;
       await fs.writeFile(jsonFilePath, JSON.stringify(data, null, 2), "utf-8");
       console.log("JSON file updated with new URL and heroWidth:", data);
 
