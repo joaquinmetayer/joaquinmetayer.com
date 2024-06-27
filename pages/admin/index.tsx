@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import AdminPanel from "./components/AdminPanel";
 import "./admin.css";
 import AdminLayout from "./components/Layout";
+import CreatePost from "./components/CreatePost";
+import DeletePost from "./components/DeletePost";
 
 const Admin: React.FC = () => {
   const [isLocal, setIsLocal] = useState(false);
@@ -18,7 +19,9 @@ const Admin: React.FC = () => {
       <AdminLayout>
         {isLocal ? (
           <>
-            <AdminPanel />
+            <CreatePost />
+            <hr />
+            <DeletePost />
           </>
         ) : (
           <p>Administrator panel only in localhost</p>

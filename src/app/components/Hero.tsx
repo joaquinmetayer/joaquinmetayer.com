@@ -5,14 +5,10 @@ import data from "../../../assets/data.json";
 export default function Hero() {
   return (
     <>
-      <img
-        src={`/images/${data.heroImage}`}
-        alt="joaquinmetayer"
-        style={{ width: `${data.heroWidth}`, paddingTop: "5px" }}
-      />
+      <h1>
+        <Link href="/">joaquinmetayer</Link>
+      </h1>
       <p>
-        <Link href="/">Joaquin Metayer</Link>
-        {" / "}
         {data.links.map((link, index) => (
           <span key={index}>
             <Link key={index} href={link.url} target="_blank">
@@ -20,6 +16,7 @@ export default function Hero() {
             </Link>{" "}
           </span>
         ))}
+        <Link href="/admin">Admin</Link>
       </p>
 
       <hr />

@@ -8,11 +8,10 @@ export default function AdminLayout({
 }) {
   return (
     <>
+      <h1>
+        <Link href="/">joaquinmetayer</Link>
+      </h1>
       <p>
-        <Link href="/" target="_blank">
-          Joaquin Metayer
-        </Link>
-        {" / "}
         <Link href="/admin">Admin</Link>
       </p>
       <hr />

@@ -2,8 +2,8 @@ import fs from "fs";
 import matter from "gray-matter";
 import { PostMetadata } from "./PostMetadata";
 
-const getPostMetadata = (): PostMetadata[] => {
-  const folder = "posts/";
+const getPostMetadata = (folderType :string): PostMetadata[] => {
+  const folder = `${folderType}/`;
   const files = fs.readdirSync(folder);
   const markdownPosts = files.filter((file) => file.endsWith(".md"));
 
