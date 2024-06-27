@@ -23,14 +23,14 @@ export default function Home() {
 
       {postMetadataPublic.length === 0 && (// cambiar a !== para que se vea
         <>
-          <h3>Posts destacados</h3>
+          <p><b>Destacados</b></p>
           <hr />
           {postPreviewsPinned}
           <hr />
         </>
       )}
 
-      <h3>Total {postMetadataPublic.length} posts</h3>
+      <p><b>{postMetadataPublic.length} posts</b></p>
       <hr />
       {postPreviewsPublic}
     </>
