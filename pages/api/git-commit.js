@@ -7,7 +7,18 @@ export default async function handler(req, res) {
     const git = simpleGit();
 
     try {
-      await git.pull("origin", "main");//AGREGAR QUE HAGA MERGE
+      try {
+        await git.pull("origin", "main"); 
+      } catch (pullError) {
+        if (pullError.message.includes('CONFLICT')) {
+          await git.stash();
+          await git.pull("origin", "main");
+          await git.stash(['pop']);
+        } else {
+          throw pullError;
+        }
+      }
+
       const addResult = await git.add("./*");
       const commitResult = await git.commit(gitMessage);
       const pushResult = await git.push("origin", "main");
@@ -23,8 +34,8 @@ export default async function handler(req, res) {
       console.error(error);
       res.status(500).json({
         success: false,
-        message: error,
-        error: error.message || error,
+        message: error.message || error,
+        error,
       });
     }
   } else {

@@ -16,7 +16,6 @@ export default function Hero() {
             </Link>{" "}
           </span>
         ))}
-        <Link href="/admin">Admin</Link>
       </p>
 
       <hr />
