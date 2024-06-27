@@ -9,11 +9,8 @@ export default function AdminLayout({
   return (
     <>
       <h1>
-        <Link href="/">joaquinmetayer</Link>
+        <Link href="/">joaquinmetayer</Link> <Link href="/admin">admin</Link>
       </h1>
-      <p>
-        <Link href="/admin">Admin</Link>
-      </p>
       <hr />
       {children}
     </>
