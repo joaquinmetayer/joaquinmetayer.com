@@ -1,10 +1,10 @@
-
 import fs from "fs";
 import Markdown from "markdown-to-jsx";
 import matter from "gray-matter";
 import getPostMetadata from "../../../../components/getPostMetadata";
+import { highlightCode } from "../../utils/highlight";
 
-const getPostContent = (slug: string) => {
+const getPostContent = (slug: any) => {
   try {
     const folder = "posts/";
     const file = `${folder}${slug}.md`;
@@ -28,20 +28,39 @@ const PostPage = (props: any) => {
   const post = getPostContent(slug);
 
   if (!post) {
-    return (
-      <p>
-        404
-      </p>
-    )
+    return <p>404</p>;
   }
-  
+
   return (
     <div>
       <p>
         {post.data.date} {post.data.title}
       </p>
       <article>
-        <Markdown>{post.content}</Markdown>
+        <Markdown
+          options={{
+            overrides: {
+              code: {
+                component: ({ className, children }) => {
+                  const language = className
+                    ? className.replace("lang-", "")
+                    : "";
+                  const highlighted = highlightCode(children, language);
+                  return (
+                    <pre>
+                      <code
+                        className={`hljs ${language}`}
+                        dangerouslySetInnerHTML={{ __html: highlighted }}
+                      />
+                    </pre>
+                  );
+                },
+              },
+            },
+          }}
+        >
+          {post.content}
+        </Markdown>
       </article>
     </div>
   );
