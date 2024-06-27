@@ -21,7 +21,7 @@ export default function Home() {
         </>
       )}
 
-      {postMetadataPublic.length == 0 && (
+      {postMetadataPublic.length === 0 && (// cambiar a !== para que se vea
         <>
           <h3>Posts destacados</h3>
           <hr />
