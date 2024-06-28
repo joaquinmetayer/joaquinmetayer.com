@@ -21,10 +21,11 @@ const Admin: React.FC = () => {
         {isLocal ? (
           <>
             <CreatePost />
-            <hr />
+            <div style={{display: 'flex', justifyContent: 'space-between'}}>
+            
             <DeletePost />
-            <hr />
             <MakePush />
+            </div>
           </>
         ) : (
           <p>Administrator panel only in localhost</p>
