@@ -7,7 +7,6 @@ export default function MakePush() {
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-
   const handleCommitPush = async () => {
     setIsLoading(true);
     const date: any = new Date();
