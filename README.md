@@ -1,4 +1,4 @@
-## hello stalker, mas info en www.joaquinmetayer.com
+## hello stalker, mas info en [joaquinmetayer.com](https://joaquinmetayer.github.io/joaquinmetayer/)
 
 ```javascript
 // requisitos
