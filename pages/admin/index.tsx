@@ -3,6 +3,7 @@ import "./admin.css";
 import AdminLayout from "./components/Layout";
 import CreatePost from "./components/CreatePost";
 import DeletePost from "./components/DeletePost";
+import MakePush from "./components/MakePush";
 
 const Admin: React.FC = () => {
   const [isLocal, setIsLocal] = useState(false);
@@ -22,6 +23,8 @@ const Admin: React.FC = () => {
             <CreatePost />
             <hr />
             <DeletePost />
+            <hr />
+            <MakePush />
           </>
         ) : (
           <p>Administrator panel only in localhost</p>

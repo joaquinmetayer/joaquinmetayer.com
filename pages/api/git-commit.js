@@ -7,8 +7,14 @@ export default async function handler(req, res) {
     const git = simpleGit();
 
     try {
+      const status = await git.status();
+      if (status.files.length > 0) {
+        await git.add("./*");
+        await git.commit("auto-commit before pull to resolve unstaged changes");
+      }
+
       try {
-        await git.pull("origin", "main"); 
+        await git.pull("origin", "main");
       } catch (pullError) {
         if (pullError.message.includes('CONFLICT')) {
           await git.stash();
