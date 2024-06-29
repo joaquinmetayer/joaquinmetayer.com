@@ -21,16 +21,20 @@ export default function Home() {
         </>
       )}
 
-      {postMetadataPublic.length === 0 && (// cambiar a !== para que se vea
+      {postMetadataPublic.length === 0 && ( // cambiar a !== para que se vea
         <>
-          <p><b>Destacados</b></p>
+          <p>
+            <b>Destacados</b>
+          </p>
           <hr />
           {postPreviewsPinned}
           <hr />
         </>
       )}
 
-      <p><b>{postMetadataPublic.length} posts</b></p>
+      <p>
+        <b>{postMetadataPublic.length} posts</b>
+      </p>
       <hr />
       {postPreviewsPublic}
     </>
