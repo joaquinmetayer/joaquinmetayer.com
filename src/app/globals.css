@@ -1,6 +1,7 @@
 * {
   font-family: monospace;
   box-sizing: border-box;
+  color: #000;
 }
 body {
   padding: 5px 20px;
@@ -18,7 +19,4 @@ iframe {
 h1 {
   padding-bottom: 0;
   margin-bottom: 0;
-}
-h1 a {
-  color: #000;
 }

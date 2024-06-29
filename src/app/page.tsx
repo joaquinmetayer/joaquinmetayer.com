@@ -26,20 +26,17 @@ export default function Home() {
         <>
           <hr />
           <p>
+            <b>{postMetadataPublic.length} posts</b>
+          </p>
+          <hr />
+          <p>
             <b>Destacados</b>
           </p>
           <hr />
           {postPreviewsPinned}
+          <hr />
         </>
       )}
-      <hr />
-
-      <p>
-        <b>
-          {postMetadataPublic.length} posts
-        </b>
-      </p>
-      <hr />
 
       {postPreviewsPublic}
     </>
