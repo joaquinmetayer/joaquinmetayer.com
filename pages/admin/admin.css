@@ -1,9 +1,12 @@
 * {
   font-family: monospace;
   box-sizing: border-box;
+  color: #000;
 }
 body {
   max-width: 1000px;
+  padding: 5px 20px;
+  margin: 0 auto;
 }
 input,
 button,

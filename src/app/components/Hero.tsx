@@ -4,9 +4,9 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <>
-      <p>
+      <h1>
         <Link href="/">joaquinmetayer</Link>
-      </p>
+      </h1>
     </>
   );
 }
