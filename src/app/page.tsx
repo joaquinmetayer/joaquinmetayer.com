@@ -9,11 +9,6 @@ export default function Home() {
 
   return (
     <>
-      <img
-        src="images/c4384d10-24c1-4da5-810e-823d0d9650cc.png"
-        alt="joaquinmetayer"
-        className="hero"
-      />
       {postPreviews}
     </>
   );
