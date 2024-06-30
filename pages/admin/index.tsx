@@ -25,7 +25,7 @@ const Admin: React.FC = () => {
             <DeletePost />
           </>
         ) : (
-          <p>Administrator panel only in localhost</p>
+          <p>administrator panel only in localhost</p>
         )}
       </AdminLayout>
     </>
