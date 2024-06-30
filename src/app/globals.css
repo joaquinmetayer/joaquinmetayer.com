@@ -2,12 +2,9 @@
   font-family: monospace;
   box-sizing: border-box;
   color: #000;
-
 }
 body {
-  padding: 5px 20px;
   max-width: 1000px;
-  margin: 0 auto;
 }
 img {
   width: 100%;
@@ -20,6 +17,4 @@ iframe {
 h1 {
   padding-bottom: 0;
   margin-bottom: 0;
-}
-h1 a {
 }

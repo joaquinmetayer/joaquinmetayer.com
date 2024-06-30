@@ -3,12 +3,8 @@ import PostPreview from "../../components/PostPreview";
 import data from "../../assets/data.json";
 
 export default function Home() {
-  const postMetadataPublic = getPostMetadata("posts");
-  const postPreviewsPublic = postMetadataPublic.map((post) => (
-    <PostPreview key={post.slug} {...post} />
-  ));
-  const postMetadataPinned = getPostMetadata("pinned");
-  const postPreviewsPinned = postMetadataPinned.map((post) => (
+  const postMetadata = getPostMetadata();
+  const postPreviews = postMetadata.map((post) => (
     <PostPreview key={post.slug} {...post} />
   ));
 
