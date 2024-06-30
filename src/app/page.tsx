@@ -16,7 +16,7 @@ export default function Home() {
     <>
       {data.description.length > 0 && (
         <>
-          <p>{data.description}</p>
+          <h2>{data.description}</h2>
           <hr />
         </>
       )}
