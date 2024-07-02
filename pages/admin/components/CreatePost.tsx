@@ -110,7 +110,6 @@ export default function CreatePost() {
           "Content-Type": "application/json",
         },
       });
-      await handleCommit(`new post ${newFilename}`);
 
       setMessage("Post created successfully");
     } catch (error) {
@@ -120,16 +119,6 @@ export default function CreatePost() {
       setIsLoading(false);
       window.location.reload()
     }
-  };
-
-  const handleCommit = async (gitMessage: string) => {
-    await fetch("/api/git-commit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ gitMessage }),
-    });
   };
 
   return (

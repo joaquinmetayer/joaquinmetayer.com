@@ -15,7 +15,6 @@ export default function DeletePost() {
         method: "DELETE",
         data: { title: deleteTitle },
       });
-      await handleCommit(`delete post ${deleteTitle}`);
       setMessage("Post deleted successfully");
     } catch (error) {
       console.error("Error deleting the post:", error);
@@ -24,16 +23,6 @@ export default function DeletePost() {
       setIsLoading(false);
       window.location.reload()
     }
-  };
-
-  const handleCommit = async (gitMessage: string) => {
-    await fetch("/api/git-commit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ gitMessage }),
-    });
   };
 
   return (
